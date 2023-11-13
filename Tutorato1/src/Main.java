@@ -20,7 +20,6 @@ public class Main {
 	 * @param b Second number
 	 * @return Sum of the two
 	 */
-	@SuppressWarnings("unused")
 	private static int sum(int a, int b) {
 		return a + b;
 	}
