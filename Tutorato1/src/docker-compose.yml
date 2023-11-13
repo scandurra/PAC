@@ -1,0 +1,10 @@
+version: "2"
+services:
+  main:
+    image: openjdk:21
+    container_name: "main"
+    volumes:
+      - ./main.jar:/tmp/main.jar
+      - ./input.txt:/tmp/input.txt
+    working_dir: /tmp
+    command: ["java", "-jar", "main.jar"]
