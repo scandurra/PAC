@@ -1,3 +1,4 @@
+import java.io.*;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -9,8 +10,19 @@ public class Main {
 	 *
 	 * @param args the arguments
 	 */
-	public static void main(String[] args) {
-		System.out.println(sum(13, 7));
+	public static void main(String[] args) throws FileNotFoundException {
+		BufferedReader fileReader = new BufferedReader(new FileReader(new File("input.txt")));
+
+		Object[] nums = fileReader.lines().toArray();
+		int n1 = 0;
+		int n2 = 0;
+
+		if (nums.length > 0) {
+			n1 = Integer.parseInt((String)nums[0]); // First number from first line
+			n2 = Integer.parseInt((String)nums[nums.length - 1]); // Second number from last line
+		}
+		
+		System.out.println(sum(n1, n2));
 	}
 	
 	/**
