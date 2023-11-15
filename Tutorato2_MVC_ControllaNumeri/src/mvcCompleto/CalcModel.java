@@ -9,8 +9,8 @@ import java.util.Observable;
  *  modifica fatta al suo contenuto, genera in automatico una notifica
  *  per gli observer
  */
-public class CalcModel extends Observable{
-	// La "memoria" vera e propria del modello  
+public class CalcModel extends Observable {
+	// La "memoria" vera e propria del modello
 	private String result;
 	private ArrayList<Integer> numbersList;
 
@@ -31,8 +31,7 @@ public class CalcModel extends Observable{
 		System.out.println("[MODEL] Observers notified (reset)");
 	}
 
-
-	// Moltiplica per il valore passato come stringa 
+	// Moltiplica per il valore passato come stringa
 	// Attenzione: non dalla GUI ma dal controller
 	public void checkNumber(String newNumber) {
 		// Controllo se il numero esiste nella lista
@@ -41,9 +40,9 @@ public class CalcModel extends Observable{
 		} else {
 			result = "Numero nuovo";
 			numbersList.add(Integer.parseInt(newNumber));
-		}		
-		
-		System.out.println("[MODEL] Checked "+ newNumber);
+		}
+
+		System.out.println("[MODEL] Checked " + newNumber);
 		// Comunica un cambio dello stato
 		setChanged();
 		// Notifica gli observer (la view)

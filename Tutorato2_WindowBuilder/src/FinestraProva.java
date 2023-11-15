@@ -46,11 +46,11 @@ public class FinestraProva {
 		frame.setBounds(100, 100, 450, 233);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JButton btnNewButton = new JButton("Scrivi CIAO");
 		btnNewButton.setBounds(127, 6, 114, 29);
 		frame.getContentPane().add(btnNewButton);
-		
+
 		textField = new JTextField();
 		textField.addMouseListener(new MouseAdapter() {
 			@Override
@@ -58,13 +58,13 @@ public class FinestraProva {
 				textField.setText("");
 			}
 		});
-		
+
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText("CIAO");
 			}
 		});
-		
+
 		textField.setBounds(117, 63, 130, 26);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
