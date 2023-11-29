@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<personnel>
+  <employee type="permanent">
+    <name>Seagull</name>
+    <id>3674</id>
+    <age>34</age>
+  </employee>
+  <employee type="contract">
+    <name>Robin</name>
+    <id>3675</id>
+    <age>25</age>
+  </employee>
+  <employee type="permanent">
+    <name>Crow</name>
+    <id>3676</id>
+    <age>28</age>
+  </employee>
+  <employee type="test">
+    <name>Prova</name>
+    <id>1234</id>
+    <age>29</age>
+  </employee>
+</personnel>
