@@ -1,5 +1,5 @@
 public class Calcolatrice {
   public static int pow(int a, int b) {
-    return a ^ b;
+    return (int)Math.pow(a, b);
   }
 }
