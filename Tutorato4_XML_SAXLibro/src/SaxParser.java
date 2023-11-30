@@ -9,5 +9,6 @@ import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
 
-// La classe che fa il parsing estende anche il DefaultHandler
-public class SaxParser extends DefaultHandler {}
+public class SaxParser extends DefaultHandler {
+  // TODO: Implement
+}
