@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro SYSTEM "libro.dtd">
+<libro titolo="1984" autore="G.Orwell" editore="Mondadori">
+  <prefazione autore="Bill Gates"> Questo libro non dice il vero.Orwell ha sbagliato...
+  </prefazione>
+  <indice>
+       <titolo>Parte prima</titolo>
+       <titolo>Parte seconda</titolo>
+  </indice>
+  <capitolo>1. Era una notte buia e tempestosa...</capitolo>
+  <capitolo>2. Testo del secondo capitolo...</capitolo>
+  <capitolo>3. Testo del terzo capitolo...</capitolo> 
+</libro>
