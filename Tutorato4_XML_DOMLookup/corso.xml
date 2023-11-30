@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<corso codice="F2I011">
+	<nome>Ingegneria del Web</nome>
+	<descrizione>
+		<obiettivi>bla,bla</obiettivi>
+		<prerequisiti>bla,bla</prerequisiti>
+		<esame>bla,bla</esame>
+	</descrizione>
+	<sillabo>
+		<argomento>XHML</argomento>
+		<argomento>CSS</argomento>
+		<argomento>Javascript</argomento>
+	</sillabo>
+	<docenti>
+		<docente rif="6235">
+			<nome>Giuseppe</nome>
+			<cognome>Della Penna</cognome>
+		</docente>
+	</docenti>
+	<testi>
+		<testo>
+			<autore>Vito</autore>
+			<autore>Frailis</autore>
+			<autore>Gugliotta</autore>
+			<autore>Omero</autore>
+			<titolo>Introduzione alle Tecnologie del Web</titolo>
+			<editore>McGraw-Hill</editore>
+		</testo>
+		<testo tipo="consigliato">
+			<autore>Goodman</autore>
+			<titolo>JavaScript &amp; DHTML Cookbook</titolo>
+			<editore>O'Reilly</editore>
+		</testo>
+	</testi>
+	<erogazione>
+		<crediti tipologia="B" numero="6"/>
+		<periodo>2</periodo>
+		<cdl>Informatica Specialistica</cdl>
+		<anno>2</anno>
+	</erogazione>
+	<vincoli>
+		<propedeuticita>
+			<corso rif="00002">Tecnologie del Web</corso>
+		</propedeuticita>
+		<mutuazioni>
+			<corso rif="00003">Sistemi Informatici Distribuiti</corso>
+		</mutuazioni>
+	</vincoli>
+	<risorse>
+		<link tipo="homepage">http://www.di.univaq.it/gdellape/students.php?crs=iw07</link>
+		<link tipo="esercizi">http://pagina</link>
+		<link descrizione="altra pagina">http://pagina</link>
+		<email descrizione="per domande al docente">dellapenna@nospam.di.univaq.it</email>
+	</risorse>
+</corso>
