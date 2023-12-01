@@ -2,4 +2,5 @@
 .settings
 *.class
 *.jar
+!json-20231013.jar
 bin
