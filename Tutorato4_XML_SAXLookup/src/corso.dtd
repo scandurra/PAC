@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT corso (nome, descrizione, sillabo, docenti, testi, erogazione, vincoli?, risorse?)>
+<!ATTLIST corso
+	uid ID #IMPLIED
+	codice NMTOKEN #IMPLIED
+	ssd CDATA #IMPLIED
+>
+<!ELEMENT rif-corso (#PCDATA)>
+<!ATTLIST rif-corso
+	rif NMTOKEN #IMPLIED
+>
+<!ELEMENT erogazione (crediti+, periodo, cdl, anno)>
+<!ELEMENT mutuazioni (rif-corso+)>
+<!ELEMENT propedeuticita (rif-corso+)>
+<!ELEMENT risorse ((link | email)+)>
+<!ELEMENT sillabo (argomento+)>
+<!ELEMENT testi (testo+)>
+<!ELEMENT testo (autore+, titolo, editore)>
+<!ELEMENT vincoli (propedeuticita?, mutuazioni?)>
+<!ELEMENT descrizione (obiettivi, prerequisiti?, esame)>
+<!ELEMENT docenti (docente+)>
+<!ELEMENT docente (nome, cognome)>
+<!ATTLIST docente
+	rif NMTOKEN #REQUIRED
+>
+<!ELEMENT anno (#PCDATA)>
+<!ELEMENT argomento (#PCDATA)>
+<!ELEMENT autore (#PCDATA)>
+<!ELEMENT cdl (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT obiettivi (#PCDATA)>
+<!ELEMENT periodo (#PCDATA)>
+<!ELEMENT prerequisiti (#PCDATA)>
+<!ELEMENT esame (#PCDATA)>
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT editore (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email
+	descrizione CDATA #REQUIRED
+>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link
+	tipo (homepage | esercizi) #IMPLIED
+	descrizione CDATA #IMPLIED
+>
+<!ELEMENT crediti EMPTY>
+<!ATTLIST crediti
+	tipologia (A | B | C | D | E | F) #REQUIRED
+	numero NMTOKEN #REQUIRED
+>
