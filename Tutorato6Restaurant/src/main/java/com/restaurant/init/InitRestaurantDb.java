@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.restaurant.init;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

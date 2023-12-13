@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.restaurant.domain;
 
 public class Restaurant {
   private static long N_RESTAURANT = 0;

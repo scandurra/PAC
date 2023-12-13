@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.restaurant.domain;
 
 import org.springframework.stereotype.Service;
 

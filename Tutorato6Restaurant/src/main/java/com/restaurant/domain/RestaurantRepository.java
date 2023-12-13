@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.restaurant.domain;
 
 import java.util.ArrayList;
 
