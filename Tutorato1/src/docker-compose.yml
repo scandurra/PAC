@@ -1,7 +1,6 @@
-version: "2"
 services:
   main:
-    image: openjdk:21
+    image: openjdk:23
     container_name: "main"
     volumes:
       - ./main.jar:/tmp/main.jar
