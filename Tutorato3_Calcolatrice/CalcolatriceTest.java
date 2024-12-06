@@ -1,11 +1,9 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
-
-class CalcolatriceTest {
-
+public class CalcolatriceTest {
 	@Test
-	void test() {
+	public void test() {
 		assertEquals(8, Calcolatrice.pow(2, 3));
 	}
 

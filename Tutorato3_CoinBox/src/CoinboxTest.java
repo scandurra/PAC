@@ -1,17 +1,15 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
-
-class CoinboxTest {
-
+public class CoinboxTest {
 	@Test
-	void testInit() {
+	public void testInit() {
 		Coinbox c = new Coinbox();
 		assertEquals(0, c.getNMonete());
 	}
 
 	@Test
-	void testSingleVend() {
+	public void testSingleVend() {
 		Coinbox c = new Coinbox();
 		c.insertCoin();
 		c.insertCoin();
@@ -19,7 +17,7 @@ class CoinboxTest {
 	}
 
 	@Test
-	void testNotEnough() {
+	public void testNotEnough() {
 		Coinbox c = new Coinbox();
 		c.insertCoin();
 		assertFalse(c.erogaProdotto());

@@ -1,8 +1,20 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import java.util.Arrays;
+import java.util.Collection;
 
-@RunWith(Parametrized.class)
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+class Sum {
+  public static int sum(int a, int b) {
+    return a + b;
+  }
+}
+
 class SumTest {
   // tests the method sum(a, b) == c
 
@@ -10,14 +22,8 @@ class SumTest {
   private int b;
   private int expectedOutput;
 
-  public SumTest(int a, int b, int expectedOutput) {
-    this.a = a;
-    this.b = b;
-    this.expectedOutput = expectedOutput;
-  }
-
   @Parameters
-  public static Colletion creaParams() {
+  public static Collection<Object[]> creaParams() {
     return Arrays.asList(new Object[][] {
       {0, 0, 0},
       {5, 8, 13},
@@ -27,6 +33,6 @@ class SumTest {
 
   @Test
   public void testSum() {
-    assertEquals(this.expectedOutput, sum(this.a, this.b));
+    assertEquals(this.expectedOutput, Sum.sum(this.a, this.b));
   }
 }
