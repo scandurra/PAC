@@ -5,14 +5,14 @@ This git repository contains the source code maily writte in JAVA language to su
 Exercises are a selection of tasks and works collected from the series proposed by Prof.ssa Patrizia Scandurra, revised by Dott. Michele Beretta during the past years. Part of the proposals have been extensively revised by me.
 
 # Sessions
-Here there are a link to the software material related to each lesson
+Here there are links to the software material related to each lesson (draft program):
 
-- [**TUT1**]() Software release and distribution (Git and Docker), component-based event-driven model in Java for desktop UIs (Part I)  
-- [**TUT2**]() – Java GUI — Swing and MVC (Part II)  
-- [**TUT3**]() – Static and dynamic code analysis  
-- [**TUT4**]() – Data interchange formats on the Internet (XML, JSON)  
-- [**TUT5**]() – Developing microservices with Spring  
-- [**TUT6**]() – Introduction to Android app development with Android Studio
+- [**TUT1**](https://github.com/scandurra/PAC/tree/main/TUT1) Software release and distribution (Git and Docker), component-based event-driven model in Java for desktop UIs (Part I) 
+- [**TUT2**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Java GUI — Swing and MVC (Part II)  
+- [**TUT3**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Static and dynamic code analysis  
+- [**TUT4**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Data interchange formats on the Internet (XML, JSON)  
+- [**TUT5**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Developing microservices with Spring  
+- [**TUT6**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Introduction to Android app development with Android Studio
 
 # Past repos
 - [A.A. 2016-2017](https://github.com/marcoradavelli/es_info3b) (by Marco Radavelli)
