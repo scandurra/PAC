@@ -15,8 +15,7 @@ Here there are links to the software material related to each lesson (draft prog
 - [**TUT6**](https://github.com/scandurra/PAC/tree/main/TUT1)  – Introduction to Android app development with Android Studio
 
 # Past repos
-- [A.A. 2016-2017](https://github.com/marcoradavelli/es_info3b) (by Marco Radavelli)
-- [A.A. 2017-2018](https://github.com/marcoradavelli/info3BSwing) (by Marco Radavelli)
+- [A.A. 2016-2017-2018-2019](https://github.com/marcoradavelli/es_info3b) and [SWING]((https://github.com/marcoradavelli/info3BSwing)) (by Marco Radavelli)
 - [A.A. 2019-2020](https://github.com/a-bombarda/Informatica3B2019-2020) (by Andrea Bombarda)
 - [A.A. 2020-2021](https://github.com/a-bombarda/Informatica3B-2020-2021) (by Andrea Bombarda)
 - [A.A. 2021-2022](https://github.com/a-bombarda/PAC-2021-2022) (by Andrea Bombarda)
