@@ -1,0 +1,1 @@
+print("Hello, I'm a python script runned from Docker")
