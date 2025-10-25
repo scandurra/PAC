@@ -3,11 +3,18 @@ package fileChooser;
 import javax.swing.*;
 import java.awt.*;
 
-/*
-Questo esempio aggiunge degli "accessori" al
-JFileChooser
-*/
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AccessoryApp. Questo esempio aggiunge degli "accessori" al
+ * JFileChooser
+ */
 public class AccessoryApp {
+
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		// Creo il JFileChooser
 		JFileChooser fileChooser = new JFileChooser();

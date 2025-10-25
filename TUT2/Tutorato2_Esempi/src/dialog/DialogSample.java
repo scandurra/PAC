@@ -3,15 +3,26 @@ package dialog;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come utilizzare le finestre di dialogo
-//Implemento l'ActionListener per catturare l'evento dei bottonis
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DialogSample.
+ * Questo esempio mostra come utilizzare le finestre di dialogo
+ * Implemento l'ActionListener per catturare l'evento dei bottoni
+ */
 public class DialogSample extends JFrame implements ActionListener {
+
+	/** The b 1. */
 	private JButton b1 = new JButton("Modale");
+
+	/** The b 2. */
 	private JButton b2 = new JButton("Non Modale");
 
+	/**
+	 * Instantiates a new dialog sample.
+	 */
 	public DialogSample() {
 		// Preaparo il JFrame
-		setTitle("Usare le JDialog");
+		setTitle("JDialog app");
 		setSize(300, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -28,6 +39,11 @@ public class DialogSample extends JFrame implements ActionListener {
 		b2.addActionListener(this);
 	}
 
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Creo un dialog...
 		JDialog d = new JDialog(this);
@@ -47,6 +63,11 @@ public class DialogSample extends JFrame implements ActionListener {
 		d.setVisible(true);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		DialogSample dialogsample = new DialogSample();
 		dialogsample.setVisible(true);

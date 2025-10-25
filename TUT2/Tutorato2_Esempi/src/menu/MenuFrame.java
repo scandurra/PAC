@@ -21,6 +21,7 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 
 	final static int MENU_MASK = Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
 
+	@SuppressWarnings("deprecation")
 	public MenuFrame() {
 		setTitle("fiore di primavera");
 		setSize(300, 400);

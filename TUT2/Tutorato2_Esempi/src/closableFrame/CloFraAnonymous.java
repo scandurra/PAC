@@ -3,11 +3,19 @@ package closableFrame;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Sistema per chiudere l'applicazione al chiudersi del Frame
-//tramite i listener
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CloFraAnonymous.
+ * Sistema per chiudere l'applicazione al chiudersi del Frame tramite i listener
+ */
 public class CloFraAnonymous extends CloseableFrame {
+	
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Instantiates a new clo fra anonymous.
+	 */
 	public CloFraAnonymous() {
 
 		// Imposto il listener anonimo, lo dichiaro massandolo al metodo
@@ -15,7 +23,7 @@ public class CloFraAnonymous extends CloseableFrame {
 
 			@Override
 			public void windowClosing(WindowEvent e) {
-				System.out.println("chiudo la finestra!!!");
+				System.out.println("Chiudo la finestra!!!");
 				System.exit(0);
 			}
 
@@ -48,6 +56,11 @@ public class CloFraAnonymous extends CloseableFrame {
 		});
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	// MAIN
 	public static void main(String[] args) {
 		JFrame frame = new CloFraAnonymous();

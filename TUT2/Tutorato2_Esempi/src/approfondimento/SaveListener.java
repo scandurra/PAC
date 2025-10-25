@@ -4,11 +4,31 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
 
-//Il listener per il salvataggio di un file di testo
+// TODO: Auto-generated Javadoc
+/**
+ * The listener interface for receiving save events. The class that is
+ * interested in processing a save event implements this interface, and the
+ * object created with that class is registered with a component using the
+ * component's <code>addSaveListener</code> method. When the save event occurs,
+ * that object's appropriate method is invoked.
+ *
+ * Il listener per il salvataggio di un file di testo
+ * @see SaveEvent
+ */
 public class SaveListener implements ActionListener {
+
+	/** The area. */
 	private JTextArea area;
+
+	/** The file chooser. */
 	private JFileChooser fileChooser;
 
+	/**
+	 * Instantiates a new save listener.
+	 *
+	 * @param a  the a
+	 * @param fc the fc
+	 */
 	public SaveListener(JTextArea a, JFileChooser fc) {
 		area = a;
 		fileChooser = fc;
@@ -17,6 +37,11 @@ public class SaveListener implements ActionListener {
 		fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
 	}
 
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Imposto il titolo della finestra
 		fileChooser.setDialogTitle("Salva file");
@@ -52,13 +77,10 @@ public class SaveListener implements ActionListener {
 				risposta2 = JOptionPane.CANCEL_OPTION;
 		}
 		if (risposta2 == JOptionPane.YES_OPTION) {
-			try {
-				// Apro il file
-				BufferedWriter writer = new BufferedWriter(new FileWriter(f));
-
-				// Salvo il file
-				writer.write(text);
+			try (BufferedWriter writer2 = new BufferedWriter(new FileWriter(f))) {
+				writer2.write(text);
 			} catch (Exception ex) {
+				var a = 20;
 			}
 		}
 	}

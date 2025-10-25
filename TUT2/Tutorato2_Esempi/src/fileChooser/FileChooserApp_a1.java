@@ -3,11 +3,20 @@ package fileChooser;
 import javax.swing.*;
 import java.awt.*;
 
-/*
-Questo esempio mostra tutte le caratteristiche del JFileChooser
-e dimostra il suo funzionamento aprendo un file di testo
-*/
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FileChooserApp_a1.
+ * Questo esempio mostra tutte le caratteristiche del JFileChooser
+ + e dimostra il suo funzionamento aprendo un file di testo
+ */
 public class FileChooserApp_a1 {
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		// Imposto il frame
 		JFrame f = new JFrame();

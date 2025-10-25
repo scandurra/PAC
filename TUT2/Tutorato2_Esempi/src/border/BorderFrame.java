@@ -4,11 +4,19 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-//Questo esempio mostra tanti bordi
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BorderFrame.
+ * Questo esempio mostra tanti bordi
+ */
 public class BorderFrame extends JFrame {
-	public BorderFrame() {
+
+	/**
+	 * Instantiates a new border frame.
+	 */
+	public BorderFrame(String title) {
 		// Imposto il JFrame
-		setTitle("festival di bordi");
+		setTitle(title);
 		setSize(500, 550);
 		setLocation(200, 100);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -44,25 +52,25 @@ public class BorderFrame extends JFrame {
 		contentPane.add(p4);
 
 		// QUINTO PANNELLO - bordo con titolo
-		TitledBorder linea2 = BorderFactory.createTitledBorder(linea, "quinto pannello");
+		TitledBorder linea2 = BorderFactory.createTitledBorder(linea, "Quinto pannello");
 		JPanel p5 = new JPanel();
 		p5.setBorder(linea2);
 		contentPane.add(p5);
 
 		// SESTO PANNELLO - bordo colorato spesso con titolo
-		Border lineaSpessa2 = BorderFactory.createTitledBorder(lineaSpessa, "sesto pannello");
+		Border lineaSpessa2 = BorderFactory.createTitledBorder(lineaSpessa, "Sesto pannello");
 		JPanel p6 = new JPanel();
 		p6.setBorder(lineaSpessa2);
 		contentPane.add(p6);
 
 		// SETTIMO PANNELLO - infossato con titolo
-		Border cornice2 = BorderFactory.createTitledBorder(cornice, "settimo pannello");
+		Border cornice2 = BorderFactory.createTitledBorder(cornice, "Settimo pannello");
 		JPanel p7 = new JPanel();
 		p7.setBorder(cornice2);
 		contentPane.add(p7);
 
 		// OTTAVO PANNELLO - bordo inciso con titolo
-		Border incisa2 = BorderFactory.createTitledBorder(incisa, "ottavo pannello");
+		Border incisa2 = BorderFactory.createTitledBorder(incisa, "Ottavo pannello");
 		JPanel p8 = new JPanel();
 		p8.setBorder(incisa2);
 		contentPane.add(p8);
@@ -70,15 +78,20 @@ public class BorderFrame extends JFrame {
 		// NONO PANNELLO - gran finale!!!
 		Border composto = BorderFactory.createCompoundBorder(cornice, incisa); // creazione di bordo inciso infossato a
 																				// cornice
-		Border composto2 = BorderFactory.createTitledBorder(composto, "nono pannello"); // creazione di bordo inciso con
+		Border composto2 = BorderFactory.createTitledBorder(composto, "Nono pannello"); // creazione di bordo inciso con
 																						// titolo
 		JPanel p9 = new JPanel();
 		p9.setBorder(composto2);
 		contentPane.add(p9);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
-		JFrame frame = new BorderFrame();
+		JFrame frame = new BorderFrame("Border frame app");
 		frame.setVisible(true);
 	}
 }
