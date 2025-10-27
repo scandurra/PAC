@@ -1,7 +1,6 @@
 package controller;
 
 import java.awt.event.*;
-
 import model.CalcModel;
 import view.CalcView;
 

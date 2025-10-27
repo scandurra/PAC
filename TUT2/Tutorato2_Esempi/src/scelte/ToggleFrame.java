@@ -10,7 +10,10 @@ import java.awt.event.*;
  * Questo esempio mostra come utilizzare i togglebutton.
  */
 public class ToggleFrame extends JFrame {
-
+	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new toggle frame.
 	 */

@@ -12,6 +12,9 @@ import java.awt.event.*;
  */
 public class EcoMouseFrame_a2 extends JFrame {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new eco mouse frame a 2.
 	 */

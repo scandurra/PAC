@@ -10,6 +10,9 @@ import java.awt.event.*;
  */
 public class DialogSample extends JFrame implements ActionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The b 1. */
 	private JButton b1 = new JButton("Modale");
 
@@ -20,7 +23,7 @@ public class DialogSample extends JFrame implements ActionListener {
 	 * Instantiates a new dialog sample.
 	 */
 	public DialogSample() {
-		// Preaparo il JFrame
+		// Preparo il JFrame
 		setTitle("JDialog app");
 		setSize(300, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

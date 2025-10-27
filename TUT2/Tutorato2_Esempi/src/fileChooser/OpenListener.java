@@ -45,7 +45,7 @@ public class OpenListener implements ActionListener {
 		// Visualizzo la finestra di dialogo
 		int risposta = fileChooser.showOpenDialog(area);
 
-		if (risposta == fileChooser.APPROVE_OPTION) {// Se ho premuto il tasto apri
+		if (risposta == JFileChooser.APPROVE_OPTION) {// Se ho premuto il tasto apri
 
 			// Recupero il file selezionato
 			File f = fileChooser.getSelectedFile();

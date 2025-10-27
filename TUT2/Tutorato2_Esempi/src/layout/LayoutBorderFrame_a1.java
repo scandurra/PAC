@@ -10,6 +10,9 @@ import javax.swing.*;
 //Questo esempio mostra un BorderLayout all'opera
 public class LayoutBorderFrame_a1 extends JFrame {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new layout border frame a 1.
 	 */

@@ -8,10 +8,10 @@ import java.awt.event.*;
  * Secondo sistema per chiudere l'applicazione al chiudersi del Frame tramite i listener
  */
 public class CloFraThis extends CloseableFrame implements WindowListener {
-	
+
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
-
+	
 	/**
 	 * Instantiates a new clo fra this.
 	 */

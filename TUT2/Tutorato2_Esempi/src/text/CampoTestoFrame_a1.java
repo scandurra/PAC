@@ -15,6 +15,9 @@ import java.awt.event.*;
  */
 public class CampoTestoFrame_a1 extends JFrame implements ActionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The password. */
 	private JPasswordField password;
 

@@ -14,12 +14,15 @@ import java.awt.event.*;
  */
 public class LayoutFlowFrame_a2 extends JFrame implements KeyListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The pannello pannelli. */
 	// Pannello contenitore di pannelli
 	private JPanel pannelloPannelli;
 
 	/** The contatore pannelli. */
-	private int contatorePannelli = 0;
+	private int contatorePannelli;
 
 	/**
 	 * Instantiates a new layout flow frame a 2.

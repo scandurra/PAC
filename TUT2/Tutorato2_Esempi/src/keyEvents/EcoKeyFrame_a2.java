@@ -12,6 +12,9 @@ import java.awt.event.*;
  */
 public class EcoKeyFrame_a2 extends JFrame implements KeyListener {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The pannello. */
 	private EcoKeyPanel_a2 pannello;
 
@@ -19,7 +22,7 @@ public class EcoKeyFrame_a2 extends JFrame implements KeyListener {
 	 * Instantiates a new eco key frame a 2.
 	 */
 	public EcoKeyFrame_a2() {
-		setTitle("frame per vedere gli eventi tastiera");
+		setTitle("Frame per vedere gli eventi tastiera");
 		setSize(800, 500);
 		setLocation(100, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -104,8 +107,6 @@ public class EcoKeyFrame_a2 extends JFrame implements KeyListener {
 }
 
 class EcoKeyPanel_a2 extends JPanel {
-	private static final long serialVersionUID = 1L;
-
 	public String mPressed1 = "", mPressed2 = "";
 	public String mReleased1 = "", mReleased2 = "";
 	public String mTyped = "";

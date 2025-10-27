@@ -1,7 +1,6 @@
 package closableFrame;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 /**
  * The Class CloseableFrame.
@@ -9,6 +8,9 @@ import java.awt.event.*;
  */
 public class CloseableFrame extends JFrame {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new closeable frame.
 	 */

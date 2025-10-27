@@ -10,6 +10,9 @@ import java.awt.event.*;
  */
 public class ColorChooserFrame extends JFrame implements ActionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The label. */
 	// Label che mostra il colore
 	private JLabel label = new JLabel();

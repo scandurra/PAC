@@ -10,6 +10,9 @@ import javax.swing.*;
  */
 public class LayoutBorderFrame_a2 extends JFrame {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new layout border frame a 2.
 	 */

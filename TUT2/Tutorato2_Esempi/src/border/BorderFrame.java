@@ -9,6 +9,9 @@ import javax.swing.border.*;
  * Questo esempio mostra tanti bordi.
  */
 public class BorderFrame extends JFrame {
+	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Instantiates a new border frame.

@@ -52,7 +52,7 @@ public class SaveListener implements ActionListener {
 		while (risposta2 == JOptionPane.NO_OPTION) { // Finche' non decido di salvare o di rinunciare
 			// Visualizzo la finestra di dialogo
 			int risposta = fileChooser.showSaveDialog(area);
-			if (risposta == fileChooser.APPROVE_OPTION) { // Se ho premuto il tasto salva
+			if (risposta == JFileChooser.APPROVE_OPTION) { // Se ho premuto il tasto salva
 				try {
 					// Recupero il file selezionato
 					f = fileChooser.getSelectedFile();
@@ -78,7 +78,6 @@ public class SaveListener implements ActionListener {
 			try (BufferedWriter writer2 = new BufferedWriter(new FileWriter(f))) {
 				writer2.write(text);
 			} catch (Exception ex) {
-				var a = 20;
 			}
 		}
 	}

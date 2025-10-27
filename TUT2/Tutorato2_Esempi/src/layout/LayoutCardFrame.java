@@ -13,6 +13,9 @@ import javax.swing.*;
  */
 public class LayoutCardFrame extends JFrame implements ActionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The panel color. */
 	// Creo i Panel e il layout
 	private JPanel panelColor = new JPanel();

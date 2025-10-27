@@ -10,6 +10,9 @@ import java.awt.event.*;
  */
 public class WindowFrame_a1 extends JFrame {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new window frame a 1.
 	 */

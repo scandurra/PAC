@@ -11,6 +11,9 @@ import java.awt.event.*;
 
 public class EcoKeyFrame_a1 extends JFrame {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	private static JLabel label = new JLabel("Hello, Swing!"); // Create a label with text
     
 	/**
@@ -35,8 +38,7 @@ public class EcoKeyFrame_a1 extends JFrame {
 		frame.setVisible(true);
 		
         label.setBounds(50, 50, 150, 30); // Set position and size
-
-        // Update the label text
+        
         label.setText("Welcome to Java Swing!");
 
         frame.add(label);
@@ -59,11 +61,11 @@ class AscoltaTastiera_a1 implements KeyListener {
 	public void keyPressed(KeyEvent k) {
 		// Recupero il codice del tasto premuto e lo stampo
 		int codiceTasto = k.getKeyCode();
-		label.setText("Premuto tasto " + codiceTasto + " (VK_" + k.getKeyText(codiceTasto) + ")");
+		label.setText("Premuto tasto " + codiceTasto + " (VK_" + KeyEvent.getKeyText(codiceTasto) + ")");
 		System.out.print("Premuto il tasto " + codiceTasto);
 
 		// Stampo la descrizione del tasto premuto
-		System.out.println(" tale codice corrisponde al tasto virtuale \"VK_" + k.getKeyText(codiceTasto) + "\"");
+		System.out.println(" tale codice corrisponde al tasto virtuale \"VK_" + KeyEvent.getKeyText(codiceTasto) + "\"");
 	}
 
 	public void keyReleased(KeyEvent k) {
@@ -73,7 +75,7 @@ class AscoltaTastiera_a1 implements KeyListener {
 		System.out.print("Rilasciato il tasto " + codiceTasto);
 
 		// Stampo la descrizione del tasto rilasciato
-		System.out.println(" tale codice corrisponde al tasto virtuale \"VK_" + k.getKeyText(codiceTasto) + "\"");
+		System.out.println(" tale codice corrisponde al tasto virtuale \"VK_" + KeyEvent.getKeyText(codiceTasto) + "\"");
 	}
 
 	public void keyTyped(KeyEvent k) {

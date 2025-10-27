@@ -15,6 +15,9 @@ import java.awt.event.*;
  */
 public class LayoutFlowFrame_a1 extends JFrame implements KeyListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The pannello bottoni. */
 	// Creo il JPanel che conterrà i bottoni
 	private JPanel pannelloBottoni;

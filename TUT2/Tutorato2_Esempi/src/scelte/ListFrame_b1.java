@@ -19,7 +19,7 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 	private String[] elencoFont = { "Serif", "SansSerif", "Monospaced", "Dialog", "InputDialog" };
 
 	/** The font. */
-	private JList font;
+	private JList<String> fonts;
 
 	/** The model. */
 	private OrderedListModel model;
@@ -52,22 +52,22 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 		p.add(l, BorderLayout.WEST);
 
 		// Elenco di font in una JList
-		font = new JList(elencoFont);
+		fonts = new JList(elencoFont);
 		// Creo il model (personalizzato)
 		model = new OrderedListModel();
 		// Imposto il model nella lista
-		font.setModel(model);
+		fonts.setModel(model);
 		// Creo il renderer della lista (personalizzato)
 		ListCellRenderer renderer = new FontDefaultListCellRenderer();
 		// Imposto il renderer della lista
-		font.setCellRenderer(renderer);
+		fonts.setCellRenderer(renderer);
 
 		// Imposto la selezione singola
-		font.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		fonts.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		// Imposto il listener
-		font.addListSelectionListener(this);
+		fonts.addListSelectionListener(this);
 		// aggiungo la lista così conigurata al Panel
-		p.add(new JScrollPane(font), BorderLayout.CENTER);
+		p.add(new JScrollPane(fonts), BorderLayout.CENTER);
 
 		// Imposto un JCheckBox
 		ordered = new JCheckBox("Ordinato");
@@ -90,7 +90,7 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 	public void actionPerformed(ActionEvent e) {
 		// azione sul model della lista
 		model.setOrdered(ordered.isSelected());
-		font.repaint();
+		fonts.repaint();
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 	 * @param e the e
 	 */
 	public void valueChanged(ListSelectionEvent e) {
-		String f = (String) font.getSelectedValue();
+		String f = (String) fonts.getSelectedValue();
 		messaggio.setFont(new Font(f, Font.PLAIN, 24));
 	}
 

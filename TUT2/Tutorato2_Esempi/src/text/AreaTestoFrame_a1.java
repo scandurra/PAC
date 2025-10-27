@@ -14,6 +14,9 @@ import javax.swing.event.*;
  */
 public class AreaTestoFrame_a1 extends JFrame implements DocumentListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The testo. */
 	private JTextArea testo;
 

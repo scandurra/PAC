@@ -12,6 +12,9 @@ import java.awt.event.*;
  */
 public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The pannello fiore. */
 	private MenuPanel pannelloFiore;
 

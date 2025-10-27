@@ -10,6 +10,9 @@ import javax.swing.*;
  */
 public class LayoutOverlayFrame extends JFrame {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new layout overlay frame.
 	 */

@@ -11,6 +11,9 @@ import java.awt.event.*;
  */
 public class RadioFrame extends JFrame {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new radio frame.
 	 */

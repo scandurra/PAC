@@ -14,6 +14,9 @@ import java.awt.*;
  */
 public class TXTPreviewer extends JTextArea implements PropertyChangeListener {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new TXT previewer.
 	 *

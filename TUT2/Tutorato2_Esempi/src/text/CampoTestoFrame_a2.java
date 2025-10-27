@@ -13,6 +13,9 @@ import javax.swing.event.*;
  */
 public class CampoTestoFrame_a2 extends JFrame implements DocumentListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The password. */
 	private JPasswordField password;
 

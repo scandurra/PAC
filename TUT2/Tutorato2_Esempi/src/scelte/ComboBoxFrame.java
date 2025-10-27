@@ -11,6 +11,9 @@ import javax.swing.*;
  */
 public class ComboBoxFrame extends JFrame implements ActionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The elenco font. */
 	private String[] elencoFont = { "Serif", "SansSerif", "Monospaced", "Dialog", "InputDialog" };
 

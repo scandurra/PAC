@@ -12,11 +12,14 @@ import javax.swing.event.*;
  */
 public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/** The elenco font. */
 	private String[] elencoFont = { "Serif", "SansSerif", "Monospaced", "Dialog", "InputDialog" };
 
-	/** The font. */
-	private JList font;
+	/** The fonts. */
+	private JList<String> fonts;
 
 	/** The messaggio. */
 	private JLabel messaggio;
@@ -47,13 +50,13 @@ public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 		p.add(l, BorderLayout.WEST);
 
 		// Creo una JList
-		font = new JList(elencoFont);
+		fonts = new JList(elencoFont);
 		// Imposto la modalit� di selezione singola
-		font.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		fonts.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		// aggiungo il listener
-		font.addListSelectionListener(this);
+		fonts.addListSelectionListener(this);
 		// aggiungo al panel il pannello a scorrimento che contiene la JList al centro
-		p.add(new JScrollPane(font), BorderLayout.CENTER);
+		p.add(new JScrollPane(fonts), BorderLayout.CENTER);
 
 		// aggiungo il JPanel al container
 		contentPane.add(p, BorderLayout.CENTER);
@@ -67,7 +70,7 @@ public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 	// Gestione evento su lista
 	public void valueChanged(ListSelectionEvent e) {
 		// Ottengo la entry selezionata
-		String f = (String) font.getSelectedValue();
+		String f = (String) fonts.getSelectedValue();
 		// Imposto il carattere in base alla stringa recuperata dalla entry selezionata
 		messaggio.setFont(new Font(f, Font.PLAIN, 24));
 	}

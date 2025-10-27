@@ -14,6 +14,9 @@ import java.util.EventListener;
  */
 public class LayoutAbsoluteFrame extends JFrame {
 	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Instantiates a new layout absolute frame.
 	 */
