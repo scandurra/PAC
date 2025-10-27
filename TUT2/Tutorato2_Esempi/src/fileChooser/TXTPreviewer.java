@@ -5,10 +5,20 @@ import java.beans.*;
 import javax.swing.*;
 import java.awt.*;
 
-//Implemento PropertyChangeListener che mi consente di catturare gli eventi di cambio di propriet�
-//come selected/not selected
-//Estendo JTextArea perch� implemento la preview come area testo
+/**
+ * The Class TXTPreviewer.
+ * 
+ * Implemento PropertyChangeListener che mi consente di catturare gli eventi di cambio di propriet�
+ * come selected/not selected
+ * Estendo JTextArea perche' implemento la preview come area testo
+ */
 public class TXTPreviewer extends JTextArea implements PropertyChangeListener {
+	
+	/**
+	 * Instantiates a new TXT previewer.
+	 *
+	 * @param fc the fc
+	 */
 	public TXTPreviewer(JFileChooser fc) {
 		// Rendo la casella di testo non editabile
 		this.setEditable(false);
@@ -22,6 +32,11 @@ public class TXTPreviewer extends JTextArea implements PropertyChangeListener {
 		fc.addPropertyChangeListener(this);
 	}
 
+	/**
+	 * Property change.
+	 *
+	 * @param e the e
+	 */
 	public void propertyChange(PropertyChangeEvent e) {
 		// Recupero il nome della proprieta' che e' variata nel JFileChooser
 		String prop = e.getPropertyName();

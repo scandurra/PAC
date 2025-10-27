@@ -5,22 +5,49 @@ import java.awt.geom.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come utilizzare i menu.
+/**
+ * The Class MenuFrame.
+ * 
+ * Questo esempio mostra come utilizzare i menu.
+ */
 public class MenuFrame extends JFrame implements ActionListener, MouseListener {
+
+	/** The pannello fiore. */
 	private MenuPanel pannelloFiore;
-	private String[] coloriStr = { "rosso", "verde", "blu", "giallo", "arancio", "rosa" };
+
+	/** The colori str. */
+	private String[] coloriStr = { "Rosso", "Verde", "Blu", "Giallo", "Arancio", "Rosa" };
+
+	/** The mnemonic. */
 	private char[] mnemonic = { 'r', 'v', 'b', 'g', 'a', 'o' };
+
+	/** The colori. */
 	private Color[] colori = { Color.red, Color.green, Color.blue, Color.yellow, Color.orange, Color.pink };
 
+	/** The sfondo. */
 	private JMenuItem[] sfondo = new JMenuItem[colori.length];
+
+	/** The petalo. */
 	private JMenuItem[] petalo = new JMenuItem[colori.length];
+
+	/** The cuore. */
 	private JMenuItem[] cuore = new JMenuItem[colori.length];
+
+	/** The popup item. */
 	private JMenuItem[] popupItem = new JMenuItem[colori.length];
+
+	/** The popup. */
 	private JPopupMenu popup;
+
+	/** The type. */
 	private int type = -1;
 
+	/** The Constant MENU_MASK. */
 	final static int MENU_MASK = Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
 
+	/**
+	 * Instantiates a new menu frame.
+	 */
 	@SuppressWarnings("deprecation")
 	public MenuFrame() {
 		setTitle("fiore di primavera");
@@ -86,7 +113,13 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 		setJMenuBar(barraMenu);
 	}
 
-	// Gestore di eventi sul menu
+	/**
+	 * Action performed.
+	 *
+	 * Gestore di eventi sul menu
+	 *
+	 * @param e the e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Individuo la sorgente dell'evento
 		Object source = e.getSource();
@@ -114,18 +147,43 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 		}
 	}
 
+	/**
+	 * Mouse clicked.
+	 *
+	 * @param e the e
+	 */
 	public void mouseClicked(MouseEvent e) {
 	}
 
+	/**
+	 * Mouse entered.
+	 *
+	 * @param e the e
+	 */
 	public void mouseEntered(MouseEvent e) {
 	}
 
+	/**
+	 * Mouse exited.
+	 *
+	 * @param e the e
+	 */
 	public void mouseExited(MouseEvent e) {
 	}
 
+	/**
+	 * Mouse pressed.
+	 *
+	 * @param e the e
+	 */
 	public void mousePressed(MouseEvent e) {
 	}
 
+	/**
+	 * Mouse released.
+	 *
+	 * @param e the e
+	 */
 	public void mouseReleased(MouseEvent e) {
 
 		// Solo se tasto destro
@@ -136,6 +194,11 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 		}
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		MenuFrame frame = new MenuFrame();
 		frame.setVisible(true);

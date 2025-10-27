@@ -3,8 +3,16 @@ package layout;
 import java.awt.*;
 import javax.swing.*;
 
-//Questo esempio mostra un mix di Flow e Border
+/**
+ * The Class LayoutBorderFrame_a2.
+ * 
+ * Questo esempio mostra un mix di Flow e Border.
+ */
 public class LayoutBorderFrame_a2 extends JFrame {
+	
+	/**
+	 * Instantiates a new layout border frame a 2.
+	 */
 	public LayoutBorderFrame_a2() {
 		setTitle("Layout vari all'opera");
 		// Imposto dimensioni e posizione
@@ -73,6 +81,11 @@ public class LayoutBorderFrame_a2 extends JFrame {
 		contentPane.add(E, BorderLayout.CENTER);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutBorderFrame_a2();
 		frame.setVisible(true);

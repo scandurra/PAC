@@ -4,11 +4,19 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come utilizzare i radiobutton
+/**
+ * The Class RadioFrame.
+ * 
+ * Questo esempio mostra come utilizzare i radiobutton.
+ */
 public class RadioFrame extends JFrame {
+
+	/**
+	 * Instantiates a new radio frame.
+	 */
 	public RadioFrame() {
 		// Preparo il JFrame
-		setTitle("disegno poligoni regolari");
+		setTitle("Disegno poligoni regolari");
 		setSize(500, 500);
 		setLocation(30, 20);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -18,6 +26,11 @@ public class RadioFrame extends JFrame {
 
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new RadioFrame();
 		frame.setVisible(true);

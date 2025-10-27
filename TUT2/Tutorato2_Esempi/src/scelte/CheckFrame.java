@@ -4,11 +4,19 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come utilizzare le checkbox
+/**
+ * The Class CheckFrame.
+ * 
+ * Questo esempio mostra come utilizzare le checkbox.
+ */
 public class CheckFrame extends JFrame {
+
+	/**
+	 * Instantiates a new check frame.
+	 */
 	public CheckFrame() {
 		// Imposto il JFrame e aggiungo il CheckPanel
-		setTitle("disegno poligoni regolari");
+		setTitle("Disegno poligoni regolari");
 		setSize(500, 500);
 		setLocation(30, 20);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -16,6 +24,11 @@ public class CheckFrame extends JFrame {
 		contentPane.add(new CheckPanel(), BorderLayout.CENTER);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new CheckFrame();
 		frame.setVisible(true);
@@ -58,13 +71,19 @@ class CheckPanel extends JPanel implements ActionListener {
 		// Aggiungo i pannelli al pannello principale
 		add(pulsanti, BorderLayout.SOUTH);
 		add(pannelloPoligoni, BorderLayout.CENTER);
+		
+		pannelloPoligoni.traccio4 = lati4.isSelected();
+		pannelloPoligoni.traccio8 = lati8.isSelected();
+		pannelloPoligoni.traccio16 = lati16.isSelected();
+		// Ridisegno
+		pannelloPoligoni.repaint();
 	}
 
 	// implemento il gestore di eventi del JCheckBox
 	public void actionPerformed(ActionEvent e) {
 		// Devo controllare lo stato della scelta delle opzioni
 		// ed agire di conseguenza
-		// NB: la "politica" di scelta � data dal tipo di bottoni (muamente esclusiva o
+		// NB: la "politica" di scelta + data dal tipo di bottoni (muamente esclusiva o
 		// no)
 		pannelloPoligoni.traccio4 = lati4.isSelected();
 		pannelloPoligoni.traccio8 = lati8.isSelected();

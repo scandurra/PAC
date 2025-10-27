@@ -3,9 +3,17 @@ package windowFrame;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra una finestra che manda un messaggio alla chiusura
-//(usa il WindowAdapter)
+/**
+ * The Class WindowFrame_b1.
+ * 
+ * Questo esempio mostra una finestra che manda un messaggio alla chiusura
+ * (usa il WindowAdapter).
+ */
 public class WindowFrame_b1 extends JFrame {
+
+	/**
+	 * Instantiates a new window frame b 1.
+	 */
 	public WindowFrame_b1() {
 		setTitle("finestra cavia");
 		setSize(300, 200);
@@ -15,6 +23,11 @@ public class WindowFrame_b1 extends JFrame {
 		addWindowListener(mioAscoltatore);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new WindowFrame_b1();
 		frame.setVisible(true);

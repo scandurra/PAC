@@ -4,18 +4,29 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra l'utilizzo dell'ActionListener 
-//nelle caselle di testo: visualizza in chiaro una
-//password in una casella di testo
-//Catturo l'invio di una stringa con un ActionListener che pu� catturare solo questa azione
-//da un textField, se volessi catturare altro dovrei implementare un DocumentListener
+/**
+ * The Class CampoTestoFrame_a1.
+ * 
+ * Questo esempio mostra l'utilizzo dell'ActionListener 
+ * nelle caselle di testo: visualizza in chiaro una
+ * password in una casella di testo
+ * Catturo l'invio di una stringa con un ActionListener che pu� catturare solo questa azione
+ * da un textField, se volessi catturare altro dovrei implementare un DocumentListener
+ */
 public class CampoTestoFrame_a1 extends JFrame implements ActionListener {
+
+	/** The password. */
 	private JPasswordField password;
+
+	/** The testo. */
 	private JTextField testo;
 
+	/**
+	 * Instantiates a new campo testo frame a 1.
+	 */
 	public CampoTestoFrame_a1() {
 		// Imposto il JFrame
-		setTitle("demo casella di testo");
+		setTitle("Demo casella di testo (pwd + enter)");
 		setSize(300, 200);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -33,6 +44,11 @@ public class CampoTestoFrame_a1 extends JFrame implements ActionListener {
 		contentPane.add(testo, BorderLayout.SOUTH);
 	}
 
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Catturo l'azione di invio stringa
 		String s = new String(password.getPassword());
@@ -40,6 +56,11 @@ public class CampoTestoFrame_a1 extends JFrame implements ActionListener {
 		testo.setText(s);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new CampoTestoFrame_a1();
 		frame.setVisible(true);

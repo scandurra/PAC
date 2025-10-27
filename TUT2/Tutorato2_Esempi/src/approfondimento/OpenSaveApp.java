@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 //Filtri e visualizzatori TXT
 // import fileChooser.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class OpenSaveApp.
  * Questo esempio combina caricamento e salvataggio tramite JFileChooser
@@ -25,6 +24,8 @@ public class OpenSaveApp {
 		JFileChooser fileChooser = new JFileChooser();
 		
 		// Utilizzo implementazione custom del file chooser per mostrare più informazioni durante la selezione del file
+		// Vedere package "fileChooser"
+		
 		// Disabilito al visualizzazione di tutti i tipi di file
 		// fileChooser.setAcceptAllFileFilterUsed(false);
 		// Abilito la visualizzazione dei file di tipo TXT

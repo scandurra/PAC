@@ -4,7 +4,6 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class BorderFrame.
  * Questo esempio mostra tanti bordi

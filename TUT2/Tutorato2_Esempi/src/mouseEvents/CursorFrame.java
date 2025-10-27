@@ -4,12 +4,20 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-//Questo esempio mostra come modificare il cursore del mouse
-//il pannello ascolta i movimenti del mouse
-//In base alla posizione del mouse cambia la forma del cursore
+/**
+ * The Class CursorFrame.
+ * 
+ * Questo esempio mostra come modificare il cursore del mouse
+ * il pannello ascolta i movimenti del mouse.
+ * In base alla posizione del mouse cambia la forma del cursore.
+ */
 public class CursorFrame extends JFrame {
+
+	/**
+	 * Instantiates a new cursor frame.
+	 */
 	public CursorFrame() {
-		setTitle("frame per vedere i cursori del mouse");
+		setTitle("Frame per vedere i cursori del mouse");
 		setSize(600, 600);
 		setLocation(50, 50);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,6 +29,11 @@ public class CursorFrame extends JFrame {
 		contentPane.add(pannello);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new CursorFrame();
 		frame.setVisible(true);

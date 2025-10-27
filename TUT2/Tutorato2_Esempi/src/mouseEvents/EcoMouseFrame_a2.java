@@ -4,13 +4,19 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come un Panel registra gli eventi del mouse attraverso un panel
-//L'output viene inviato al pannello
+/**
+ * The Class EcoMouseFrame_a2.
+ * 
+ * Questo esempio mostra come un Panel registra gli eventi del mouse attraverso un panel.
+ * L'output viene inviato al pannello.
+ */
 public class EcoMouseFrame_a2 extends JFrame {
-	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Instantiates a new eco mouse frame a 2.
+	 */
 	public EcoMouseFrame_a2() {
-		setTitle("frame per vedere gli eventi mouse");
+		setTitle("Frame per vedere gli eventi mouse (linea spezzata)");
 		setSize(500, 500);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,13 +27,18 @@ public class EcoMouseFrame_a2 extends JFrame {
 		contentPane.add(pannello);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new EcoMouseFrame_a2();
 		frame.setVisible(true);
 	}
 }
 
-// In questo caso � il panel a catturare gli eventi e lo fa autoascoltandosi
+// In questo caso è il panel a catturare gli eventi e lo fa autoascoltandosi
 //Avremmo potuto registrare un listener custom
 class EcoMousePanel_a2 extends JPanel implements MouseListener {
 	private int x1 = -1, y1 = -1, x2, y2;

@@ -4,19 +4,29 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra un FlowLayout all'opera
-//Ogni volta che sulla tastiera schiaccio il carattere 
-//'p' si aggiunge un nuovo pannello colorato
-//implemento il KeyListener per "ascoltare" i tasti da tastiera 
+/**
+ * The Class LayoutFlowFrame_a2.
+ * 
+ * Questo esempio mostra un FlowLayout all'opera.
+ * Ogni volta che sulla tastiera schiaccio il carattere 
+ * 'p' si aggiunge un nuovo pannello colorato
+ * implemento il KeyListener per "ascoltare" i tasti da tastiera.
+ */
 public class LayoutFlowFrame_a2 extends JFrame implements KeyListener {
 
+	/** The pannello pannelli. */
 	// Pannello contenitore di pannelli
 	private JPanel pannelloPannelli;
+
+	/** The contatore pannelli. */
 	private int contatorePannelli = 0;
 
+	/**
+	 * Instantiates a new layout flow frame a 2.
+	 */
 	public LayoutFlowFrame_a2() {
 		// Imposto il JFrame
-		setTitle("FlowLayout all'opera");
+		setTitle("FlowLayout all'opera (premi p)");
 		setSize(300, 400);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -35,12 +45,27 @@ public class LayoutFlowFrame_a2 extends JFrame implements KeyListener {
 		contentPane.add(pannelloPannelli);
 	}
 
+	/**
+	 * Key pressed.
+	 *
+	 * @param k the k
+	 */
 	public void keyPressed(KeyEvent k) {
 	}
 
+	/**
+	 * Key released.
+	 *
+	 * @param k the k
+	 */
 	public void keyReleased(KeyEvent k) {
 	}
 
+	/**
+	 * Key typed.
+	 *
+	 * @param k the k
+	 */
 	public void keyTyped(KeyEvent k) {
 		// Ottengo il carattere premuto
 		char carattere = k.getKeyChar();
@@ -50,6 +75,9 @@ public class LayoutFlowFrame_a2 extends JFrame implements KeyListener {
 		}
 	}
 
+	/**
+	 * Aggiungi pannello.
+	 */
 	private void aggiungiPannello() {
 		// Creo un nuovo JPanel
 		JPanel pannello = new JPanel();
@@ -61,6 +89,11 @@ public class LayoutFlowFrame_a2 extends JFrame implements KeyListener {
 		pannelloPannelli.validate(); // Indispensabile all'aggiornamento del layout, chiama da solo il repaint
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutFlowFrame_a2();
 		frame.setVisible(true);

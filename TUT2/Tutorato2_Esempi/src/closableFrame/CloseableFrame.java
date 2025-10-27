@@ -3,7 +3,6 @@ package closableFrame;
 import javax.swing.*;
 import java.awt.event.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class CloseableFrame.
  * Secondo sistema per chiudere l'applicazione al chiudersi del Frame tramite i listener

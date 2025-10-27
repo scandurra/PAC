@@ -4,14 +4,28 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-// Questo esempio mostra un CardLayout all'opera
-// implemento ActionListener perch� voglio usare un bottone per cambiare da una card all'altra
+/**
+ * The Class LayoutCardFrame.
+ * 
+ * Questo esempio mostra un CardLayout all'opera
+ * implemento ActionListener perchè voglio usare un bottone per 
+ * cambiare da una card all'altra
+ */
 public class LayoutCardFrame extends JFrame implements ActionListener {
+
+	/** The panel color. */
 	// Creo i Panel e il layout
 	private JPanel panelColor = new JPanel();
+
+	/** The panel button. */
 	private JPanel panelButton = new JPanel();
+
+	/** The card. */
 	private CardLayout card = new CardLayout();
 
+	/**
+	 * Instantiates a new layout card frame.
+	 */
 	// Costruttore
 	public LayoutCardFrame() {
 		// Imposto titolo, dimensioni e posizione
@@ -47,6 +61,11 @@ public class LayoutCardFrame extends JFrame implements ActionListener {
 		}
 	}
 
+	/**
+	 * Action performed.
+	 *
+	 * @param e the e
+	 */
 	// Action listener condiviso da tutti i bottoni
 	public void actionPerformed(ActionEvent e) {
 		// Ottengo il bottone sorgente dell'evento
@@ -58,6 +77,11 @@ public class LayoutCardFrame extends JFrame implements ActionListener {
 		card.show(panelColor, str);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutCardFrame();
 		frame.setVisible(true);

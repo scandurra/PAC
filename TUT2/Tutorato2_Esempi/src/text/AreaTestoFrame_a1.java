@@ -4,17 +4,28 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-//Digito in una area di testo.
-//I caratteri di cio' che digito vengono contati e 
-//visualizzati in un altro pannello
-//Implemento DocumentListener per "ascoltare" le azioni sul JTextArea
+/**
+ * The Class AreaTestoFrame_a1.
+ * 
+ * Digito in una area di testo.
+ * I caratteri di cio' che digito vengono contati e 
+ * visualizzati in un altro pannello.
+ * Implemento DocumentListener per "ascoltare" le azioni sul JTextArea.
+ */
 public class AreaTestoFrame_a1 extends JFrame implements DocumentListener {
-	private JTextArea testo;
-	private JTextField caratteri;
 
+	/** The testo. */
+	private JTextArea testo;
+
+	/** The caratteri. */
+	private JLabel caratteri;
+
+	/**
+	 * Instantiates a new area testo frame a 1.
+	 */
 	public AreaTestoFrame_a1() {
 		// Imposto il JFrame e creo il container
-		setTitle("demo casella di testo");
+		setTitle("Demo casella di testo");
 		setSize(300, 200);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -29,31 +40,52 @@ public class AreaTestoFrame_a1 extends JFrame implements DocumentListener {
 		testo.getDocument().addDocumentListener(this);
 		// aggiungo la text area
 		contentPane.add(testo, BorderLayout.CENTER);
-
+		
 		// Creo un text field...
-		caratteri = new JTextField();
+		caratteri = new JLabel();
+		caratteri.setText("-");
 		// ... e lo aggiungo
 		contentPane.add(caratteri, BorderLayout.SOUTH);
 	}
 
-	// Evento insrisci carattere
+	/**
+	 * Insert update.
+	 *
+	 * Evento inserisci carattere.
+	 * @param e the e
+	 */
 	public void insertUpdate(DocumentEvent e) {
 		int lunghezza = testo.getText().length();
-		caratteri.setText("ci sono " + lunghezza + " caratteri");
+		caratteri.setText("Ci sono " + lunghezza + " caratteri");
 	}
 
-	// Evento rimuovi carattere
+	/**
+	 * Removes the update.
+	 *
+	 * Evento rimuovi carattere.
+	 * @param e the e
+	 */
 	public void removeUpdate(DocumentEvent e) {
 		int lunghezza = testo.getText().length();
-		caratteri.setText("ci sono " + lunghezza + " caratteri");
+		caratteri.setText("Ci sono " + lunghezza + " caratteri");
 	}
 
-	// Evento cambia carattere
+	/**
+	 * Changed update.
+	 *
+	 * Evento cambia carattere.
+	 * @param e the e
+	 */
 	public void changedUpdate(DocumentEvent e) {
 		int lunghezza = testo.getText().length();
-		caratteri.setText("ci sono " + lunghezza + " caratteri");
+		caratteri.setText("Ci sono " + lunghezza + " caratteri");
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new AreaTestoFrame_a1();
 		frame.setVisible(true);

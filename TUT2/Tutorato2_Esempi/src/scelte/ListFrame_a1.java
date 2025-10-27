@@ -4,16 +4,29 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-//Questo esempio mostra come utilizzare una lista
-//Implemento il ListSelectionListener per gestire gli eventi sulla lista
+/**
+ * The Class ListFrame_a1.
+ * 
+ * Questo esempio mostra come utilizzare una lista.
+ * Implemento il ListSelectionListener per gestire gli eventi sulla lista.
+ */
 public class ListFrame_a1 extends JFrame implements ListSelectionListener {
+
+	/** The elenco font. */
 	private String[] elencoFont = { "Serif", "SansSerif", "Monospaced", "Dialog", "InputDialog" };
+
+	/** The font. */
 	private JList font;
+
+	/** The messaggio. */
 	private JLabel messaggio;
 
+	/**
+	 * Instantiates a new list frame a 1.
+	 */
 	public ListFrame_a1() {
 		// Imposto il JFramerame
-		setTitle("scegli un font");
+		setTitle("Scegli un font");
 		setSize(500, 200);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,7 +34,7 @@ public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 		Container contentPane = getContentPane();
 
 		// Creo una JLabel per il messaggio
-		messaggio = new JLabel("Pippo, Pluto e Paperino");
+		messaggio = new JLabel("Lorem ipsum dolor sit amet");
 		// Imposto il font iniziale
 		messaggio.setFont(new Font("Serif", Font.PLAIN, 24));
 		// lo aggiungo al container
@@ -46,6 +59,11 @@ public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 		contentPane.add(p, BorderLayout.CENTER);
 	}
 
+	/**
+	 * Value changed.
+	 *
+	 * @param e the e
+	 */
 	// Gestione evento su lista
 	public void valueChanged(ListSelectionEvent e) {
 		// Ottengo la entry selezionata
@@ -54,6 +72,11 @@ public class ListFrame_a1 extends JFrame implements ListSelectionListener {
 		messaggio.setFont(new Font(f, Font.PLAIN, 24));
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new ListFrame_a1();
 		frame.setVisible(true);

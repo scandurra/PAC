@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ColorChooserFrame.
  * Questo esempio mostra il classico modo di utilizzo del JColorChooser

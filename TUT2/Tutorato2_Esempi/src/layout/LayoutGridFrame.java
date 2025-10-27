@@ -3,8 +3,16 @@ package layout;
 import java.awt.*;
 import javax.swing.*;
 
-//Questo esempio mostra un GridLayout all'opera
+/**
+ * The Class LayoutGridFrame.
+ * 
+ * Questo esempio mostra un GridLayout all'opera
+ */
 public class LayoutGridFrame extends JFrame {
+
+	/**
+	 * Instantiates a new layout grid frame.
+	 */
 	public LayoutGridFrame() {
 		// Imposto il frame
 		setTitle("GridLayout all'opera");
@@ -24,10 +32,15 @@ public class LayoutGridFrame extends JFrame {
 			contentPane.add(p);
 		}
 		// inserisco un bottone all'ultima posizione
-		JButton bottone = new JButton("un bottone");
+		JButton bottone = new JButton("Un bottone");
 		contentPane.add(bottone);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutGridFrame();
 		frame.setVisible(true);

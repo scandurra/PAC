@@ -4,11 +4,19 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra come utilizzare i togglebutton
+/**
+ * The Class ToggleFrame.
+ * 
+ * Questo esempio mostra come utilizzare i togglebutton.
+ */
 public class ToggleFrame extends JFrame {
+
+	/**
+	 * Instantiates a new toggle frame.
+	 */
 	public ToggleFrame() {
 		// Preparo il JFrame
-		setTitle("disegno poligoni regolari");
+		setTitle("Disegno poligoni regolari");
 		setSize(500, 500);
 		setLocation(30, 20);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -17,6 +25,11 @@ public class ToggleFrame extends JFrame {
 		contentPane.add(new TogglePanel(), BorderLayout.CENTER);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new ToggleFrame();
 		frame.setVisible(true);
@@ -52,12 +65,18 @@ class TogglePanel extends JPanel implements ActionListener {
 		// Aggiungo i pannelli al pannello principale
 		add(pulsanti, BorderLayout.SOUTH);
 		add(disegno, BorderLayout.CENTER);
+		
+		disegno.traccio4 = lati4.isSelected();
+		disegno.traccio8 = lati8.isSelected();
+		disegno.traccio16 = lati16.isSelected();
+		// Ridisegno
+		disegno.repaint();
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		// Devo controllare lo stato della scelta delle opzioni
 		// ed agire di conseguenza
-		// NB: la "politica" di scelta � data dal tipo di bottoni (muamente esclusiva o
+		// NB: la "politica" di scelta è data dal tipo di bottoni (muamente esclusiva o
 		// no)
 		disegno.traccio4 = lati4.isSelected();
 		disegno.traccio8 = lati8.isSelected();

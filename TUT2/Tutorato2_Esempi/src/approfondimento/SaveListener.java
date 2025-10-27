@@ -4,7 +4,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The listener interface for receiving save events. The class that is
  * interested in processing a save event implements this interface, and the

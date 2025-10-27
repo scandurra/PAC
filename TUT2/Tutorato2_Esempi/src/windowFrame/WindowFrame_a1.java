@@ -3,8 +3,16 @@ package windowFrame;
 import javax.swing.*;
 import java.awt.event.*;
 
-//Questo esempio mostra la gestione degli eventi di finestra
+/**
+ * The Class WindowFrame_a1.
+ * 
+ * Questo esempio mostra la gestione degli eventi di finestra.
+ */
 public class WindowFrame_a1 extends JFrame {
+
+	/**
+	 * Instantiates a new window frame a 1.
+	 */
 	public WindowFrame_a1() {
 		setTitle("finestra cavia");
 		setSize(300, 200);
@@ -16,6 +24,11 @@ public class WindowFrame_a1 extends JFrame {
 		addWindowListener(mioAscoltatore);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new WindowFrame_a1();
 		frame.setVisible(true);

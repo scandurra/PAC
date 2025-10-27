@@ -6,31 +6,47 @@ import javax.swing.*;
 import javax.swing.event.*;
 import java.util.*;
 
-//Questo esempio mostra come "personalizzare" una lista
-//Implemento due listener, uno per le azioni sulla lista e uno per le azioni sul JCheclBox
+/**
+ * The Class ListFrame_b1.
+ * 
+ * Questo esempio mostra come "personalizzare" una lista.
+ * Implemento due listener, uno per le azioni sulla lista e uno per le azioni sul JCheclBox.
+ */
 public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectionListener {
 
+	/** The elenco font. */
 	// Campi privati
 	private String[] elencoFont = { "Serif", "SansSerif", "Monospaced", "Dialog", "InputDialog" };
+
+	/** The font. */
 	private JList font;
+
+	/** The model. */
 	private OrderedListModel model;
+
+	/** The messaggio. */
 	private JLabel messaggio;
+
+	/** The ordered. */
 	private JCheckBox ordered;
 
+	/**
+	 * Instantiates a new list frame b 1.
+	 */
 	public ListFrame_b1() {
 		// Imposto il JFrame
-		setTitle("scegli un font");
+		setTitle("Scegli un font");
 		setSize(500, 200);
 		setLocation(300, 200);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		Container contentPane = getContentPane();
 
 		// Imposto e aggiungo una JLabel con il testo
-		messaggio = new JLabel("Pippo, Pluto e Paperino");
+		messaggio = new JLabel("Lorem ipsum dolor sit amet");
 		messaggio.setFont(new Font("Serif", Font.PLAIN, 24));
 		contentPane.add(messaggio, BorderLayout.NORTH);
 
-		// Imposto un JPanel che conterr� la lista di scelta
+		// Imposto un JPanel che conterrà la lista di scelta
 		JPanel p = new JPanel(new BorderLayout());
 		JLabel l = new JLabel("Scegli un font");
 		p.add(l, BorderLayout.WEST);
@@ -50,7 +66,7 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 		font.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		// Imposto il listener
 		font.addListSelectionListener(this);
-		// aggiungo la lista cos� conigurata al Panel
+		// aggiungo la lista così conigurata al Panel
 		p.add(new JScrollPane(font), BorderLayout.CENTER);
 
 		// Imposto un JCheckBox
@@ -64,19 +80,36 @@ public class ListFrame_b1 extends JFrame implements ActionListener, ListSelectio
 		contentPane.add(p, BorderLayout.CENTER);
 	}
 
-	// Gestione evento del CheckBox
+	/**
+	 * Action performed.
+	 * 
+	 * Gestione evento del CheckBox.
+	 *
+	 * @param e the e
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// azione sul model della lista
 		model.setOrdered(ordered.isSelected());
 		font.repaint();
 	}
 
-	// Gestione evento sulla lista
+	/**
+	 * Value changed.
+	 * 
+	 * Gestione evento sulla lista.
+	 *
+	 * @param e the e
+	 */
 	public void valueChanged(ListSelectionEvent e) {
 		String f = (String) font.getSelectedValue();
 		messaggio.setFont(new Font(f, Font.PLAIN, 24));
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new ListFrame_b1();
 		frame.setVisible(true);

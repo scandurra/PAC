@@ -3,7 +3,6 @@ package dialog;
 import javax.swing.*;
 import java.awt.event.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class DialogSample.
  * Questo esempio mostra come utilizzare le finestre di dialogo

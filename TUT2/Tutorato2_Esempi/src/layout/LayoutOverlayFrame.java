@@ -3,8 +3,16 @@ package layout;
 import java.awt.*;
 import javax.swing.*;
 
-//Questo esempio mostra un OverlayLayout all'opera
+/**
+ * The Class LayoutOverlayFrame.
+ * 
+ * Questo esempio mostra un OverlayLayout all'opera.
+ */
 public class LayoutOverlayFrame extends JFrame {
+
+	/**
+	 * Instantiates a new layout overlay frame.
+	 */
 	public LayoutOverlayFrame() {
 		// Imposto il JFrame
 		setTitle("OverlayLayout all'opera");
@@ -34,6 +42,11 @@ public class LayoutOverlayFrame extends JFrame {
 
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutOverlayFrame();
 		frame.setVisible(true);

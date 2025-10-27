@@ -3,11 +3,17 @@ package fileChooser;
 import javax.swing.*;
 import java.awt.*;
 
-/*
-Questo esempio abilita la visualizzazione solo di alcuni
-tipi di file nel JFileChooser
-*/
+/**
+ * The Class FileChooserApp_b1. Questo esempio abilita la visualizzazione solo
+ * di alcuni tipi di file nel JFileChooser
+ */
 public class FileChooserApp_b1 {
+
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		// Creo il JFileChooser
 		JFileChooser fileChooser = new JFileChooser();

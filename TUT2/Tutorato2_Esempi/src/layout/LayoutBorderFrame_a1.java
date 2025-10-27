@@ -3,8 +3,16 @@ package layout;
 import java.awt.*;
 import javax.swing.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LayoutBorderFrame_a1.
+ */
 //Questo esempio mostra un BorderLayout all'opera
 public class LayoutBorderFrame_a1 extends JFrame {
+	
+	/**
+	 * Instantiates a new layout border frame a 1.
+	 */
 	public LayoutBorderFrame_a1() {
 		setTitle("BorderLayout all'opera");
 		// Imposto dimensioni e posizione
@@ -43,6 +51,11 @@ public class LayoutBorderFrame_a1 extends JFrame {
 		add(E, BorderLayout.CENTER);
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutBorderFrame_a1();
 		frame.setVisible(true);

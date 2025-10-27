@@ -7,8 +7,16 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.EventListener;
 
-//Questo esempio mostra un AbsoluteLayout all'opera
+/**
+ * The Class LayoutAbsoluteFrame.
+ * 
+ * Questo esempio mostra un AbsoluteLayout all'opera.
+ */
 public class LayoutAbsoluteFrame extends JFrame {
+	
+	/**
+	 * Instantiates a new layout absolute frame.
+	 */
 	public LayoutAbsoluteFrame() {
 		setTitle("AbsoluteLayout all'opera");
 		// imposto misure e posizionamento
@@ -18,7 +26,7 @@ public class LayoutAbsoluteFrame extends JFrame {
 		// Creo il container
 		Container pane = getContentPane();
 		// Imposto il layout nullo, in questo modo richiamo il
-		// layout di default che � l'absolute
+		// layout di default che è l'absolute
 		pane.setLayout(null);
 
 		// Creo i bottoni e...
@@ -45,6 +53,11 @@ public class LayoutAbsoluteFrame extends JFrame {
 
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new LayoutAbsoluteFrame();
 		frame.setVisible(true);

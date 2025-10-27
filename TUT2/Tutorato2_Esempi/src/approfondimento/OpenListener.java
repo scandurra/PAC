@@ -4,7 +4,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
 
-// TODO: Auto-generated Javadoc
 /**
  * The listener with aim of loading a txt file. The listener interface for
  * receiving open events. The class that is interested in processing a open
