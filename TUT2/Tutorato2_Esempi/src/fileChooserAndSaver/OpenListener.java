@@ -1,17 +1,16 @@
-package fileChooser;
+package fileChooserAndSaver;
 
 import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
 
 /**
- * The listener interface for receiving open events. The class that is
- * interested in processing a open event implements this interface, and the
- * object created with that class is registered with a component using the
- * component's <code>addOpenListener</code> method. When the open event occurs,
- * that object's appropriate method is invoked.
- * 
- * Il listener per il caricamento di un file di testo.
+ * The listener with aim of loading a txt file. The listener interface for
+ * receiving open events. The class that is interested in processing a open
+ * event implements this interface, and the object created with that class is
+ * registered with a component using the component's
+ * <code>addOpenListener</code> method. When the open event occurs, that
+ * object's appropriate method is invoked.
  */
 public class OpenListener implements ActionListener {
 
@@ -30,7 +29,8 @@ public class OpenListener implements ActionListener {
 	public OpenListener(JTextArea a, JFileChooser fc) {
 		area = a;
 		fileChooser = fc;
-		// Imposto la directory corrente
+
+		// Set directory
 		fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
 	}
 
@@ -44,17 +44,17 @@ public class OpenListener implements ActionListener {
 		fileChooser.setDialogTitle("Apri file");
 		// Visualizzo la finestra di dialogo
 		int risposta = fileChooser.showOpenDialog(area);
-
-		if (risposta == fileChooser.APPROVE_OPTION) {// Se ho premuto il tasto apri
+		if (risposta == fileChooser.APPROVE_OPTION) { // Se ho premuto il tasto apri
 
 			// Recupero il file selezionato
 			File f = fileChooser.getSelectedFile();
 			try {
-				// Apro il file creando un reader di stringhe
+				// Apro il file
 				BufferedReader reader = new BufferedReader(new FileReader(f));
 
-				// Carico il file fino alla fine e lo aggiungo alla text area
+				// Carico il file
 				String str = null;
+				area.setText("");
 				while ((str = reader.readLine()) != null)
 					area.append(str + "\n");
 			} catch (Exception ex) {

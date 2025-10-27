@@ -6,12 +6,14 @@ import javax.swing.border.*;
 
 /**
  * The Class BorderFrame.
- * Questo esempio mostra tanti bordi
+ * Questo esempio mostra tanti bordi.
  */
 public class BorderFrame extends JFrame {
 
 	/**
 	 * Instantiates a new border frame.
+	 *
+	 * @param title the title
 	 */
 	public BorderFrame(String title) {
 		// Imposto il JFrame

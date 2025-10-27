@@ -14,7 +14,7 @@ public class WindowFrame_a1 extends JFrame {
 	 * Instantiates a new window frame a 1.
 	 */
 	public WindowFrame_a1() {
-		setTitle("finestra cavia");
+		setTitle("Finestra cavia (log)");
 		setSize(300, 200);
 		setLocation(300, 200);
 		// Aggiungiamo un listener degli eventi del frame direttamente al frame
@@ -40,31 +40,31 @@ public class WindowFrame_a1 extends JFrame {
 //che prevede sette metodi differenti
 class AscoltatoreEventiFrame_a1 implements WindowListener {
 	public void windowClosing(WindowEvent e) {
-		System.out.println("la finestra si sta chiudendo");
+		System.out.println("La finestra si sta chiudendo");
 		((JFrame) e.getSource()).dispose();
 	}
 
 	public void windowClosed(WindowEvent e) {
-		System.out.println("la finestra si e' chiusa");
+		System.out.println("La finestra si e' chiusa");
 	}
 
 	public void windowIconified(WindowEvent e) {
-		System.out.println("la finestra e' ora una icona");
+		System.out.println("La finestra e' ora una icona");
 	}
 
 	public void windowDeiconified(WindowEvent e) {
-		System.out.println("la finestra e' passata da icona a finestra");
+		System.out.println("La finestra e' passata da icona a finestra");
 	}
 
 	public void windowOpened(WindowEvent e) {
-		System.out.println("la finestra e' stata aperta");
+		System.out.println("La finestra e' stata aperta");
 	}
 
 	public void windowActivated(WindowEvent e) {
-		System.out.println("la finestra e' la componente attiva");
+		System.out.println("La finestra e' la componente attiva");
 	}
 
 	public void windowDeactivated(WindowEvent e) {
-		System.out.println("la finestra e' divenuta inattiva");
+		System.out.println("La finestra e' divenuta inattiva");
 	}
 }
