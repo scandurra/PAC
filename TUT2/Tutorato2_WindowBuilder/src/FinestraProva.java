@@ -14,7 +14,7 @@ public class FinestraProva {
 
 	private JFrame frame;
 	public JTextField textField;
-
+	
 	/**
 	 * Launch the application.
 	 */
