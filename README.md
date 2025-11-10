@@ -17,21 +17,21 @@ Here there are links to the software material related to each lesson (draft prog
 
   
 
-#### [**TUT1**](https://github.com/scandurra/PAC/tree/main/TUT1) – Software release and distribution (Git and Docker), component-based event-driven model in Java for desktop UIs (Part I)
+#### [**TUT1**](./TUT1) – Software release and distribution (Git and Docker), component-based event-driven model in Java for desktop UIs (Part I)
 
 #### [**TUT2**](https://github.com/scandurra/PAC/tree/main/TUT2) – Java GUI — Swing and MVC (Part II)
-- [Esempi vari](https://github.com/scandurra/PAC/tree/main/TUT2/Tutorato2_Esempi) - [JDoc](https://github.com/scandurra/PAC/tree/main/TUT2/Tutorato2_Esempi/doc/index.html)
-- [MVC calcolatrice](https://github.com/scandurra/PAC/tree/main/TUT2/Tutorato2_MVC_Calcolatrice)
-- [MVC controlla numeri](https://github.com/scandurra/PAC/tree/main/TUT2/Tutorato2_MVC_Calcolatrice)
-- [Window builder](https://github.com/scandurra/PAC/tree/main/TUT2/Tutorato2_MVC_Calcolatrice)
+- [Esempi vari](./TUT2/Tutorato2_Esempi) - [JDoc](./TUT2/Tutorato2_Esempi/doc/index.html)
+- [MVC calcolatrice](./TUT2/Tutorato2_MVC_Calcolatrice)
+- [MVC controlla numeri](./TUT2/Tutorato2_MVC_Calcolatrice)
+- [Window builder](./TUT2/Tutorato2_MVC_Calcolatrice)
 
-#### [**TUT3**](https://github.com/scandurra/PAC/tree/main/TUT3) – Static and dynamic code analysis
+#### [**TUT3**](./TUT3) – Static and dynamic code analysis
 
-#### [**TUT4**](https://github.com/scandurra/PAC/tree/main/TUT4) – Data interchange formats on the Internet (XML, JSON)
+#### [**TUT4**](./TUT4) – Data interchange formats on the Internet (XML, JSON)
 
-#### [**TUT5**](https://github.com/scandurra/PAC/tree/main/TUT5) – Developing microservices with Spring
+#### [**TUT5**](./TUT5) – Developing microservices with Spring
 
-#### [**TUT6**](https://github.com/scandurra/PAC/tree/main/TUT6) – Introduction to Android app development with Android Studio
+#### [**TUT6**](./TUT6) – Introduction to Android app development with Android Studio
 
   
 
