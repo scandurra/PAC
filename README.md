@@ -19,7 +19,7 @@ Here there are links to the software material related to each lesson (draft prog
 
 #### [**TUT1**](./TUT1) – Software release and distribution (Git and Docker), component-based event-driven model in Java for desktop UIs (Part I)
 
-#### [**TUT2**](https://github.com/scandurra/PAC/tree/main/TUT2) – Java GUI — Swing and MVC (Part II)
+#### [**TUT2**](./TUT2) – Java GUI — Swing and MVC (Part II)
 - [Esempi vari](./TUT2/Tutorato2_Esempi) - [JDoc](./TUT2/Tutorato2_Esempi/doc/index.html)
 - [MVC calcolatrice](./TUT2/Tutorato2_MVC_Calcolatrice)
 - [MVC controlla numeri](./TUT2/Tutorato2_MVC_Calcolatrice)
