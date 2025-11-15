@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  myapp:
+    build: .
+    container_name: docker-2
+    restart: unless-stopped
+    volumes:
+      - ./input.txt:/app/input.txt
+    working_dir: /app
+    command: ["java", "-jar", "sommatore.jar", "input.txt"]
