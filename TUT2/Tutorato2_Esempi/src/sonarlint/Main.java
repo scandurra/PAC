@@ -1,5 +1,13 @@
 package sonarlint;
 
+/**
+ * Code smells:
+	God method
+	uso eccessivo di if ⇒ complessità ciclom. molto alta
+	duplicazione
+	assenza di logica separata
+	codice morto
+ */
 public class Main {
 
     public static void main(String[] args) {

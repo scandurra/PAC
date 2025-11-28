@@ -3,6 +3,14 @@ package sonarlint;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Errori:
+	duplicazione
+	missing null-check
+	metodo statico che richiama quello di Main ⇒ dipendenza circolare
+	uso improprio di eccezioni
+	variabili inutili
+ */
 public class DataProcessor {
 
     private List<String> results = new ArrayList<>();

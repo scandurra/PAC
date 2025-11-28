@@ -2,13 +2,13 @@ package sonarlint;
 
 import java.util.List;
 
-/*
- * 
-metodo troppo lungo
-concatenazione inefficiente
-duplicazione
-controllo nullo mancante
-dipendenza verso FileUtils ⇒ ciclo
+/**
+ * Errori:
+	metodo troppo lungo
+	concatenazione inefficiente
+	duplicazione
+	controllo nullo mancante
+	dipendenza verso FileUtils ⇒ ciclo
  */
 public class ReportGenerator {
 

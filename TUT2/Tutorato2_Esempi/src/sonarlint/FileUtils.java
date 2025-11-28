@@ -6,11 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * 
-File leak
-lettura senza chiusura
-ignorare eccezioni
-richiamo verso DataProcessor ⇒ dep. ciclica
+ * Errori:
+	File leak
+	lettura senza chiusura
+	ignorare eccezioni
+	richiamo verso DataProcessor ⇒ dep. ciclica
  */
 public class FileUtils {
 

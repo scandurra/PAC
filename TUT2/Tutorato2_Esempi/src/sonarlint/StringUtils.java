@@ -1,13 +1,14 @@
 package sonarlint;
 
+/**
+ * Errori:
+	metodo inutile
+	codice raggiungibile inutilmente complesso
+	return multipli
+	naming scorretto
+ */
 public class StringUtils {
 
-	/*
-		metodo inutile
-		codice raggiungibile inutilmente complesso
-		return multipli
-		naming scorretto
-	 */
     public static boolean checkString(String s) {
         if (s == null) return false;
         if (s.length() == 0) return false;
