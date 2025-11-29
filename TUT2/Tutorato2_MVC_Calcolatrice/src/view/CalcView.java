@@ -2,38 +2,37 @@ package view;
 
 import java.awt.*;
 import javax.swing.*;
-
-import model.CalcModel;
-
+import model.*;
 import java.awt.event.*;
 import java.util.Observable;
 import java.util.Observer;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CalcView.
  * 
  * View della Calcolatrice. Implementiamo "Observer" per fare in modo di
- * controllare le modifiche sul model e venir notificati ad ogni modifica.
+ * controllare le modifiche sul model e venir notificati ad ogni modifica del
+ * model.
  */
-// del model
-public class CalcView extends JFrame implements Observer {
-	
+public class CalcView extends JFrame implements Observer, IOperationResultDelegate {
+
 	/** The m user input tf. */
 	// Campi della view
 	private JTextField m_userInputTf = new JTextField(5);
-	
+
 	/** The m total tf. */
 	private JTextField m_totalTf = new JTextField(20);
-	
+
 	/** The m multiply btn. */
 	private JButton m_multiplyBtn = new JButton("Multiply");
-	
+
 	/** The m clear btn. */
 	private JButton m_clearBtn = new JButton("Clear");
 
 	/** The m model. */
 	// Riferimento a model
-	private CalcModel m_model;
+	private ICalcModel m_model;
 
 	/**
 	 * Instantiates a new calc view.
@@ -41,12 +40,17 @@ public class CalcView extends JFrame implements Observer {
 	 * @param model the model
 	 */
 	// Costruttore
-	public CalcView(CalcModel model) {
+	public CalcView(ICalcModel model) {
 		// Alloco il riferimento passato relativo al modello
 		m_model = model;
+
 		// Il model implementa Observable, aggiungo al modello un Observer
 		// (la view stessa)
-		m_model.addObserver(this);
+		// Qui serve cast esplicito solo perchè, in questo semplice esempio, abbiamo
+		// implementato sia un pattern tramite Observable sia patter observ/delegate
+		// tramite
+		// interfaccia ICalcModel e IOperationResultDelegate
+		((Observable) m_model).addObserver(this);
 
 		// Inizio a configurare la vista
 		m_totalTf.setText(model.getValue());
@@ -78,6 +82,7 @@ public class CalcView extends JFrame implements Observer {
 	 * questo modo, invece, è sufficiente avere il riferimento all'intera classe
 	 * CalcView.
 	 */
+
 	// Getter per rendere disponibile all'esterno il valore del campo
 	/**
 	 * Gets the user input.
@@ -123,7 +128,7 @@ public class CalcView extends JFrame implements Observer {
 	/**
 	 * Update.
 	 *
-	 * @param o the o
+	 * @param o   the o
 	 * @param arg the arg
 	 */
 	// quando l'osservato (il modello) effettua una notifica
@@ -145,4 +150,14 @@ public class CalcView extends JFrame implements Observer {
 		m_totalTf.setText(m_model.getValue());
 	}
 
+	/**
+	 * On operation result.
+	 *
+	 * @param result the result
+	 */
+	@Override
+	public void onOperationResult(String result) {
+		// TODO Auto-generated method stub
+		m_totalTf.setText(result);
+	}
 }

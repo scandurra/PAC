@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JSplitPane;
 
 public class InternalJFrame extends JFrame {
 
@@ -36,6 +38,12 @@ public class InternalJFrame extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		
+		JSplitPane splitPane = new JSplitPane();
+		contentPane.add(splitPane);
+		
+		JButton btnNewButton = new JButton("New button");
+		splitPane.setLeftComponent(btnNewButton);
 
 	}
 

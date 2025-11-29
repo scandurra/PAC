@@ -52,10 +52,10 @@ public class OpenSaveApp {
 		salva.addActionListener(new SaveListener(area, fileChooser)); // La classe SaveListener e' definita in un'altro file
 		clear.addActionListener(new ActionListener() { // In-line listener
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				area.setText("");
-			}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			area.setText("");
+		}
 		});
 		
 		f.setSize(600, 600);

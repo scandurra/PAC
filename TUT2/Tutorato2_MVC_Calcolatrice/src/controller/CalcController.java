@@ -1,16 +1,16 @@
 package controller;
 
 import java.awt.event.*;
-import model.CalcModel;
+import model.*;
 import view.CalcView;
 
 public class CalcController {
 	// Riferimenti, il controller deve interagire sia con la view che con il modello
-	private CalcModel m_model;
+	private ICalcModel m_model;
 	private CalcView m_view;
 
 	// Costruttore
-	public CalcController(CalcModel model, CalcView view) {
+	public CalcController(ICalcModel model, CalcView view) {
 		// alloco i riferimenti passati
 		m_model = model;
 		m_view = view;
@@ -31,10 +31,10 @@ public class CalcController {
 			System.out.println("[CONTROLLER] multiply action received");
 			String userInput = "";
 			try {
-				// uso il riferimento alla view per catturare l'input
+				// Uso il riferimento alla view per catturare l'input
 				// inserito dall'utente
 				userInput = m_view.getUserInput();
-				// uso il riferimento al modello per fargli eseguire la moltiplicazione
+				// Uso il riferimento al modello per fargli eseguire la moltiplicazione
 				m_model.multiplyBy(userInput);
 			} catch (NumberFormatException nfex) {
 				m_view.showError("Bad input: '" + userInput + "'");
