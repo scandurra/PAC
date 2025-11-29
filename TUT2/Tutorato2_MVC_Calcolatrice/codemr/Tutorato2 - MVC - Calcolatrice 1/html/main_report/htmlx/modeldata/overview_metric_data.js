@@ -1,0 +1,1 @@
+var CodeMR_ProjectMetrics = {"Project Name":"Tutorato2 - MVC - Calcolatrice", "Number of Highly Problematic Classes":0, "Number of Entities":8, "Number of Problematic Classes":0, "Class Lines of Code":99, "Number of External Packages":22, "Number of Packages":4, "Number of External Entities":129}
