@@ -1,17 +1,12 @@
-import java.net.ContentHandler;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
 import org.xml.sax.Attributes;
-import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.Locator;
 
 // public class SaxParser implements org.xml.sax.ContentHandler, org.xml.sax.ErrorHandler {
 public class SaxParser extends DefaultHandler {
@@ -51,6 +46,7 @@ public class SaxParser extends DefaultHandler {
 
 	// Evento di apertura del tag nel file XML
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		System.out.println("startElement - uri " + uri + " local name " + localName + " qName " + qName + " attributes " + attributes.getValue("type"));
 		// Reset delle variabili temporanee usate per la lettura
 		tmp = "";
 		if (qName.equalsIgnoreCase("employee")) {
@@ -62,10 +58,12 @@ public class SaxParser extends DefaultHandler {
 	// Evento PCDATA nel file XML
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		tmp = new String(ch, start, length);
+		System.out.println("characters - ch '" + tmp + "'");
 	}
 
 	// Evento chiusura tag nel file XML
 	public void endElement(String uri, String localName, String qName) throws SAXException {
+		System.out.println("endElement - uri " + uri + " local name " + localName + " qName " + qName);
 		if (qName.equalsIgnoreCase("employee")) {
 			employees.add(currentEmployee);
 		} else if (qName.equalsIgnoreCase("name")) {
@@ -97,53 +95,50 @@ public class SaxParser extends DefaultHandler {
 	}
 
 	// ContentHandler interface methods implementation
-	/*
+	
 	@Override
 	public void setDocumentLocator(Locator locator) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("setDocumentLocator " + locator.toString());
 	}
 
 	@Override
 	public void startDocument() throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("startDocument");
 		
 	}
 
 	@Override
 	public void endDocument() throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("endDocument");
 		
 	}
 
 	@Override
 	public void startPrefixMapping(String prefix, String uri) throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("startDocument " + prefix + " uri " + uri);
 		
 	}
 
 	@Override
 	public void endPrefixMapping(String prefix) throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("startDocument " + prefix);
 		
 	}
 
 	@Override
 	public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("startDocument - start " + start + " len " + length);
 		
 	}
 
 	@Override
 	public void processingInstruction(String target, String data) throws SAXException {
-		// TODO Auto-generated method stub
+		System.out.println("processingInstruction - target " + target + " data " + data);
 		
 	}
 
 	@Override
 	public void skippedEntity(String name) throws SAXException {
-		// TODO Auto-generated method stub
-		
+		System.out.println("skippedEntity "+ name);	
 	}
-	*/
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><corso codice="38090">
+    <nome>nome corso</nome>
+    <descrizione>
+        <obiettivi>
+            <!--Obiettivi formativi del corso-->
+        </obiettivi>
+        <esame>
+            <!--Modalità di esame-->
+        </esame>
+    </descrizione>
+    <syllabus>
+        <argomento crediti="3">Arg1</argomento>
+        <argomento crediti="5">Arg2</argomento>
+        <argomento crediti="1">Arg3</argomento>
+    </syllabus>
+    <docenti>
+        <docente rif="IDdocente">
+            <nome>
+                <!--Nome del docente-->
+            </nome>
+            <cognome>
+                <!--Cognome del docente-->
+            </cognome>
+        </docente>
+    </docenti>
+    <testi>
+        <testo>
+            <autore>
+                <!--Autore del testo-->
+            </autore>
+            <titolo>
+                <!--Titolo del testo-->
+            </titolo>
+            <editore>
+                <!--Editore del testo-->
+            </editore>
+        </testo>
+    </testi>
+</corso>

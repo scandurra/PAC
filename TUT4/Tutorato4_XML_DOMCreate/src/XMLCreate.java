@@ -29,7 +29,7 @@ Struttura desiderata
 		</testo>
 	</testi>
 </corso>
-*/
+ */
 
 public class XMLCreate {
 	/*

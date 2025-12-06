@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE corso SYSTEM "./corso.dtd">
+<corso uid="C001" codice="F2I011" ssd="INGINF/05">
+    <nome>Informatica III</nome>
+
+    <descrizione>
+        <obiettivi>Sviluppo di un'applicazione software con tecnologia Java/Eclipse</obiettivi>
+        <prerequisiti>bla,bla</prerequisiti>
+        <esame>bla,bla</esame>
+    </descrizione>
+
+    <sillabo>
+        <argomento>Java GUI</argomento>
+        <argomento>Design patterns</argomento>
+        <argomento>Eclipse plug-in</argomento>
+    </sillabo>
+
+    <docenti>
+        <docente rif="6235">
+            <nome>Patrizia</nome>
+            <cognome>Scandurra</cognome>
+        </docente>
+        <docente rif="6236">
+            <nome>Angelo</nome>
+            <cognome>Gargantini</cognome>
+        </docente>
+        <docente rif="0001">
+            <nome>Michele</nome>
+            <cognome>Beretta</cognome>
+        </docente>
+    </docenti>
+
+    <testi>
+        <testo tipo="obbligatorio">
+            <autore>Vito</autore>
+            <autore>Frailis</autore>
+            <autore>Gugliotta</autore>
+            <autore>Omero</autore>
+            <titolo>Introduzione alle Tecnologie del Web</titolo>
+            <editore>McGraw-Hill</editore>
+        </testo>
+
+        <testo tipo="consigliato">
+            <autore>Goodman</autore>
+            <titolo>JavaScript &amp; DHTML Cookbook</titolo>
+            <editore>O'Reilly</editore>
+        </testo>
+    </testi>
+
+    <erogazione>
+        <crediti tipologia="B" numero="6"/>
+        <periodo>2</periodo>
+        <cdl>Informatica Specialistica</cdl>
+        <anno>1</anno>
+    </erogazione>
+
+    <vincoli>
+        <propedeuticita>
+            <rif-corso rif="00002">Informatica III</rif-corso>
+        </propedeuticita>
+
+        <mutuazioni>
+            <rif-corso rif="00003">Sistemi Informatici Distribuiti</rif-corso>
+        </mutuazioni>
+    </vincoli>
+
+    <risorse>
+        <link tipo="esercizi">http://pagina</link>
+        <link descrizione="altra pagina">http://pagina</link>
+        <email descrizione="per domande al docente">scandurra@unibg.it</email>
+    </risorse>
+</corso>

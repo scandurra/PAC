@@ -16,6 +16,9 @@
 <!ELEMENT sillabo (argomento+)>
 <!ELEMENT testi (testo+)>
 <!ELEMENT testo (autore+, titolo, editore)>
+<!ATTLIST testo
+	tipo CDATA #IMPLIED>
+	
 <!ELEMENT vincoli (propedeuticita?, mutuazioni?)>
 <!ELEMENT descrizione (obiettivi, prerequisiti?, esame)>
 <!ELEMENT docenti (docente+)>
