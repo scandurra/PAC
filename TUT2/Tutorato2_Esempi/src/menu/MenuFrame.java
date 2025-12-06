@@ -123,7 +123,7 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 	 *
 	 * @param e the e
 	 */
-	public void actionPerformed(ActionEvent e) {
+	/*public void actionPerformed(ActionEvent e) {
 		// Individuo la sorgente dell'evento
 		Object source = e.getSource();
 		for (int i = 0; i < colori.length; i++) {
@@ -148,7 +148,7 @@ public class MenuFrame extends JFrame implements ActionListener, MouseListener {
 				}
 			}
 		}
-	}
+	}*/
 
 	/**
 	 * Mouse clicked.

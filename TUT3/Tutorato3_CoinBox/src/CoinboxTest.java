@@ -22,5 +22,4 @@ public class CoinboxTest {
 		c.insertCoin();
 		assertFalse(c.erogaProdotto());
 	}
-
 }
