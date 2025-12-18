@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
@@ -10,6 +11,15 @@ public class CounterTest {
 
 		c = new Counter(7);
 		assertEquals(7, c.get());
+	}
+	
+	@Test
+	public void testNewCounterFailure() {
+		Counter c = new Counter();
+		assertNotEquals(0, c.get());
+
+		c = new Counter(7);
+		assertNotEquals(7, c.get());
 	}
 
 	@Test
