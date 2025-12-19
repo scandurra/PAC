@@ -12,27 +12,27 @@ import org.springframework.stereotype.Service;
  * The Class RestaurantService.
  */
 @Service
-public class RestaurantService {	
+public class RestaurantService {
 	/** The Constant log. */
 	private static final Logger log = LoggerFactory.getLogger(RestaurantRepository.class);
-	
+
 	/** The repo. */
 	// !!!!!!! - meglio usare DI
 	// Creato così direttamente non consente envetuali unit test su questa parte
 	// private RestaurantRepository repo = new RestaurantRepository();
-	
+
 	@Autowired
 	private RestaurantRepository repo;
-	
+
 	/**
 	 * Creates the restaurant.
 	 *
-	 * @param name the name
+	 * @param name     the name
 	 * @param location the location
 	 * @return the restaurant
 	 */
 	public Restaurant createRestaurant(String name, String location) {
-        log.info("Creating restaurant: {} in {}", name, location);
+		log.info("Creating restaurant: {} in {}", name, location);
 		Restaurant r = new Restaurant(name, location);
 		return repo.save(r);
 	}
@@ -43,7 +43,7 @@ public class RestaurantService {
 	 * @return the all restaurants
 	 */
 	public List<Restaurant> getAllRestaurants() {
-        log.debug("Fetching all restaurants");
+		log.debug("Fetching all restaurants");
 		return repo.getAll();
 	}
 
@@ -54,7 +54,7 @@ public class RestaurantService {
 	 * @return the restaurant
 	 */
 	public Restaurant getRestaurant(long id) {
-        log.debug("Fetching restaurant by ID: {}", id);
+		log.debug("Fetching restaurant by ID: {}", id);
 		Restaurant r = repo.findById(id);
 		return r;
 	}
@@ -77,18 +77,18 @@ public class RestaurantService {
 	 * @return the restaurant
 	 */
 	public Restaurant deleteRestaurantByName(String name) {
-        log.info("Deleting restaurant by name: {}", name);
+		log.info("Deleting restaurant by name: {}", name);
 		Restaurant r = repo.deleteRestaurant(name);
-		
-        if (r != null) {
-            log.info("Restaurant deleted successfully: {}", name);
-        } else {
-            log.warn("Restaurant not found for deletion: {}", name);
-        }
-        
+
+		if (r != null) {
+			log.info("Restaurant deleted successfully: {}", name);
+		} else {
+			log.warn("Restaurant not found for deletion: {}", name);
+		}
+
 		return r;
 	}
-	
+
 	/**
 	 * Delete restaurant by id.
 	 *
@@ -96,15 +96,15 @@ public class RestaurantService {
 	 * @return the restaurant
 	 */
 	public Restaurant deleteRestaurantById(long id) {
-        log.info("Deleting restaurant by id: {}", id);
+		log.info("Deleting restaurant by id: {}", id);
 		Restaurant r = repo.deleteRestaurant(id);
-		
-        if (r != null) {
-            log.info("Restaurant deleted successfully: {}", id);
-        } else {
-            log.warn("Restaurant not found for deletion: {}", id);
-        }
-        
+
+		if (r != null) {
+			log.info("Restaurant deleted successfully: {}", id);
+		} else {
+			log.warn("Restaurant not found for deletion: {}", id);
+		}
+
 		return r;
 	}
 }

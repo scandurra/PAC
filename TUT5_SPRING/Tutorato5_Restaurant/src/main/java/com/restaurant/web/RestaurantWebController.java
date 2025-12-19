@@ -23,11 +23,11 @@ import com.restaurant.init.InitRestaurantDb;
  * The Class RestaurantWebController.
  */
 @RestController
-@RequestMapping("/api/v1/restaurants")  // 1. Base path + versioning
+@RequestMapping("/api/v1/restaurants") // 1. Base path + versioning
 public class RestaurantWebController {
 	/** The Constant log. */
 	private static final Logger log = LoggerFactory.getLogger(RestaurantWebController.class);
-	
+
 	/** The service. */
 	@Autowired
 	private RestaurantService service;
@@ -39,11 +39,11 @@ public class RestaurantWebController {
 	 * @return the restaurant
 	 */
 	// NOTA: @PathVariable deve avere lo stesso nome presente in GetMapping
-    @GetMapping("/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Restaurant> getRestaurant(@PathVariable("id") long restaurantId) {
-        log.debug("GET /restaurants/" + restaurantId);
+		log.debug("GET /restaurants/" + restaurantId);
 		Restaurant r = service.getRestaurant(restaurantId);
-        return r != null ? ResponseEntity.ok(r) : ResponseEntity.notFound().build();
+		return r != null ? ResponseEntity.ok(r) : ResponseEntity.notFound().build();
 	}
 
 	/**
@@ -51,11 +51,11 @@ public class RestaurantWebController {
 	 *
 	 * @return the all restaurants
 	 */
-    @GetMapping
+	@GetMapping
 	public ResponseEntity<List<Restaurant>> getAllRestaurants() {
-        log.debug("GET /restaurants");
-        List<Restaurant> list = service.getAllRestaurants();
-        return ResponseEntity.ok(list);             // 200 OK
+		log.debug("GET /restaurants");
+		List<Restaurant> list = service.getAllRestaurants();
+		return ResponseEntity.ok(list); // 200 OK
 	}
 
 	/**
@@ -65,27 +65,24 @@ public class RestaurantWebController {
 	 * @param location       the location
 	 * @return the restaurant
 	 */
-    @PostMapping
-    public ResponseEntity<Restaurant> addRestaurant(
-            @RequestParam(defaultValue = "", name = "name") String restaurantName,
-            @RequestParam String location) {
-        Restaurant created = service.createRestaurant(restaurantName, location);
-        return ResponseEntity
-                .status(201)                        // 201 CREATED
-                .body(created);
-    }
+	@PostMapping
+	public ResponseEntity<Restaurant> addRestaurant(
+			@RequestParam(defaultValue = "", name = "name") String restaurantName, @RequestParam String location) {
+		Restaurant created = service.createRestaurant(restaurantName, location);
+		return ResponseEntity.status(201) // 201 CREATED
+				.body(created);
+	}
 
-    /**
-     * Delete restaurant by id.
-     *
-     * @param id the id
-     * @return the response entity
-     */
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRestaurant(@PathVariable long id) {
-        Restaurant deleted = service.deleteRestaurantById(id);
-        return deleted != null
-                ? ResponseEntity.noContent().build() // 204 NO CONTENT
-                : ResponseEntity.notFound().build(); // 404 NOT FOUND
-    }
+	/**
+	 * Delete restaurant by id.
+	 *
+	 * @param id the id
+	 * @return the response entity
+	 */
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteRestaurant(@PathVariable long id) {
+		Restaurant deleted = service.deleteRestaurantById(id);
+		return deleted != null ? ResponseEntity.noContent().build() // 204 NO CONTENT
+				: ResponseEntity.notFound().build(); // 404 NOT FOUND
+	}
 }

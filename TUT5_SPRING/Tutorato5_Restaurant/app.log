@@ -10447,3 +10447,8 @@ Unconditional classes:
 2025-12-18T21:29:09.824+01:00 DEBUG 80971 --- [Ristorante] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2025-12-18T21:29:09.825+01:00 DEBUG 80971 --- [Ristorante] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
 2025-12-18T21:29:09.825+01:00 DEBUG 80971 --- [Ristorante] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 204 NO_CONTENT
+2025-12-18T21:59:46.380+01:00  INFO 80971 --- [Ristorante] [RMI TCP Connection(35)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-12-18T21:59:46.384+01:00 DEBUG 80971 --- [Ristorante] [RMI TCP Connection(35)-127.0.0.1] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2025-12-18T21:59:46.385+01:00 DEBUG 80971 --- [Ristorante] [RMI TCP Connection(35)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@134d26af, started on Thu Dec 18 21:28:50 CET 2025
+2025-12-18T21:59:46.388+01:00  INFO 80971 --- [Ristorante] [RMI TCP Connection(35)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-18T21:59:46.395+01:00  INFO 80971 --- [Ristorante] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete

@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import com.restaurant.domain.Restaurant;
@@ -52,36 +53,42 @@ public class Tutorato5RestaurantClientApplication {
 	@Bean
 	CommandLineRunner run(RestTemplate restTemplate) {
 	    return args -> {
-	        // 1) GET: tutti i ristoranti
-	        ArrayList<?> all = restTemplate.getForObject(
-	                "http://localhost:8080/api/v1/restaurants",
-	                ArrayList.class);
-	        log.info("GET /api/v1/restaurants -> {}", all);
+	    	try {
+		        // 1) GET: tutti i ristoranti
+		        ArrayList<?> all = restTemplate.getForObject(
+		                "http://localhost:8080/api/v1/restaurants",
+		                ArrayList.class);
+		        log.info("GET /api/v1/restaurants -> {}", all);
 
-	        // 2) POST: crea un nuovo ristorante
-	        String name = "Trattoria Client";
-	        String location = "Milano";
-	        Restaurant created = restTemplate.postForObject(
-	                "http://localhost:8080/api/v1/restaurants?name={name}&location={loc}",
-	                null,
-	                Restaurant.class,
-	                name,
-	                location);
-	        log.info("POST /api/v1/restaurants -> {}", created);
+		        // 2) POST: crea un nuovo ristorante
+		        String name = "Trattoria Client";
+		        String location = "Milano";
+		        Restaurant created = restTemplate.postForObject(
+		                "http://localhost:8080/api/v1/restaurants?name={name}&location={loc}",
+		                null,
+		                Restaurant.class,
+		                name,
+		                location);
+		        log.info("POST /api/v1/restaurants -> {}", created);
 
-	        // 3) GET: ristorante per id (es. 1)
-	        Restaurant byId = restTemplate.getForObject(
-	                "http://localhost:8080/api/v1/restaurants/{id}",
-	                Restaurant.class,
-	                1L);
-	        log.info("GET /api/v1/restaurants/1 -> {}", byId);
+		        // 3) GET: ristorante per id (es. 1)
+		        Restaurant byId = restTemplate.getForObject(
+		                "http://localhost:8080/api/v1/restaurants/{id}",
+		                Restaurant.class,
+		                1L);
+		        log.info("GET /api/v1/restaurants/1 -> {}", byId);
 
-	        // 4) DELETE: cancella per nome
-	        var id = byId.getId();
-	        restTemplate.delete(
-	                "http://localhost:8080/api/v1/restaurants/{id}",
-	                id);
-	        log.info("DELETE /api/v1/restaurants/{} eseguita", id);
+		        // 4) DELETE: cancella per nome
+		        var id = byId.getId();
+		        restTemplate.delete(
+		                "http://localhost:8080/api/v1/restaurants/{id}",
+		                id);
+		        log.info("DELETE /api/v1/restaurants/{} eseguita", id);
+	        } catch (HttpClientErrorException.NotFound e) {
+	            log.warn("Risorsa non trovata: {}", e.getMessage());
+	        } catch (RestClientException e) {
+	            log.error("Errore chiamando le API del ristorante", e);
+	        }
 	    };
 	}
 }
