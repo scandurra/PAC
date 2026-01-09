@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NasaPictureViewer</string>
+    <string name="etUser">Username</string>
+    <string name="etPsw">Password</string>
+    <string name="User"></string>
+    <string name="Psw"></string>
+    <string name="Login">Login</string>
+</resources>
